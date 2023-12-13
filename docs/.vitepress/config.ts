@@ -7,6 +7,9 @@ export default defineConfig({
   description: 'Self hosted server wiki',
 
   themeConfig: {
+    search: {
+      provider: 'local'
+    },
     nav: [
       {
         text: 'Info',
