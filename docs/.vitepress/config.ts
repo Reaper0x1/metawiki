@@ -5,6 +5,9 @@ export default defineConfig({
   lang: 'en-US',
   title: 'Metawiki',
   description: 'Self hosted server wiki',
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+
+
 
   themeConfig: {
     search: {
