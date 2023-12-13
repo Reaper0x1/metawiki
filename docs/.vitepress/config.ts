@@ -28,6 +28,7 @@ export default defineConfig({
         text: 'LXC Container',
         items: [
           { text: 'AdGuard Home', link: '/lxc-container/adguardhome' },
+          { text: 'Nginx Proxy Manager', link: '/lxc-container/nginx-proxy-manager' },
         ],
       },
 
@@ -65,6 +66,7 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'AdGuard Home', link: '/lxc-container/adguardhome' },
+              { text: 'Nginx Proxy Manager', link: '/lxc-container/nginx-proxy-manager' },
             ],
           },
           // ...
