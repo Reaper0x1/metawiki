@@ -21,6 +21,12 @@ export default defineConfig({
           { text: 'General config', link: '/proxmox/general-config' },
         ],
       },
+      {
+        text: 'LXC Container',
+        items: [
+          { text: 'AdGuard Home', link: '/lxc-container/adguardhome' },
+        ],
+      },
 
       // {
       //   text: 'Dropdown Menu',
@@ -49,6 +55,13 @@ export default defineConfig({
               { text: 'Getting started', link: '/proxmox/getting-started' },
               { text: 'Installation', link: '/proxmox/installation' },
               { text: 'General config', link: '/proxmox/general-config' },
+            ],
+          },
+          {
+            text: 'LXC Container',
+            collapsed: false,
+            items: [
+              { text: 'AdGuard Home', link: '/lxc-container/adguardhome' },
             ],
           },
           // ...
