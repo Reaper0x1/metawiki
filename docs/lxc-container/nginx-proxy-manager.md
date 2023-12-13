@@ -71,7 +71,7 @@ Next, go to <strong>Host</strong> tab -> <strong>Proxy Host</strong> and create 
 * Domain names: type <strong>proxy.example.com</strong> and click enter.
 * Scheme: <strong>http</strong>
 * Forward Hostname / IP: <strong>192.168.1.100</strong>
-* Forward Port<strong>81</strong>
+* Forward Port: <strong>81</strong>
 * Enable <strong>Cache Assets</strong>, <strong>Block Common Exploits</strong> and <strong>Websocket support</strong>.
 
 <strong>SSL</strong>
