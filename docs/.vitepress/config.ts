@@ -33,6 +33,12 @@ export default defineConfig({
           { text: 'Nginx Proxy Manager', link: '/lxc-container/nginx-proxy-manager' },
         ],
       },
+      {
+        text: 'Docker Container',
+        items: [
+          { text: 'Nginx Proxy Manager', link: '/docker-container/nginx-proxy-manager' },
+        ],
+      },
 
       // {
       //   text: 'Dropdown Menu',
@@ -56,7 +62,7 @@ export default defineConfig({
           },
           {
             text: 'Proxmox',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'Getting started', link: '/proxmox/getting-started' },
               { text: 'Installation', link: '/proxmox/installation' },
@@ -65,10 +71,17 @@ export default defineConfig({
           },
           {
             text: 'LXC Container',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'AdGuard Home', link: '/lxc-container/adguardhome' },
               { text: 'Nginx Proxy Manager', link: '/lxc-container/nginx-proxy-manager' },
+            ],
+          },
+          {
+            text: 'Docker Container',
+            collapsed: true,
+            items: [
+              { text: 'Nginx Proxy Manager', link: '/docker-container/nginx-proxy-manager' },
             ],
           },
           // ...
