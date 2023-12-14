@@ -1,4 +1,4 @@
-# AdGuard Home
+# AdGuard Home <img src="/adguard_icon.png" width="50" height="50" style="display:inline-block; vertical-align: middle; margin-left:10px;">
 
 AdGuard Home is a network-wide software for blocking ads & tracking.
 

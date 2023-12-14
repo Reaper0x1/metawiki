@@ -1,4 +1,4 @@
-# Nginx Proxy Manager
+# Nginx Proxy Manager <img src="/npm_icon.png" width="50" height="50" style="display:inline-block; vertical-align: middle; margin-left:10px;">
 
 The Nginx Proxy Manager conveniently manages proxy hosts for your web services, whether on your home network or otherwise.
 
@@ -17,7 +17,7 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/nginxproxyma
 
 ## Configuration
 
-Login to the user interface at <strong>ht<span>tp://</span>ip-address:81</strong>.
+Login to the user interface at <strong>ht<span>tp://</span>192.168.1.100:81</strong>.
 
 Let's configure a new SSL Certificate provided by Cloudflare.
 
