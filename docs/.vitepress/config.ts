@@ -21,7 +21,7 @@ export default defineConfig({
       {
         text: 'Proxmox',
         items: [
-          { text: 'Getting started', link: '/proxmox/getting-started' },
+          { text: 'Get started', link: '/proxmox/get-started' },
           { text: 'Installation', link: '/proxmox/installation' },
           { text: 'General config', link: '/proxmox/general-config' },
         ],
@@ -67,7 +67,7 @@ export default defineConfig({
             text: 'Proxmox',
             collapsed: true,
             items: [
-              { text: 'Getting started', link: '/proxmox/getting-started' },
+              { text: 'Get started', link: '/proxmox/get-started' },
               { text: 'Installation', link: '/proxmox/installation' },
               { text: 'General config', link: '/proxmox/general-config' },
             ],
