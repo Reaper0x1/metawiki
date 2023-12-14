@@ -1,4 +1,4 @@
-# Nginx Proxy Manager <img src="/npm_icon.png" width="50" height="50" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# Nginx Proxy Manager <img src="/npm-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
 
 The Nginx Proxy Manager conveniently manages proxy hosts for your web services, whether on your home network or otherwise.
 
@@ -13,19 +13,15 @@ Run the following command in the Proxmox shell:
 bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/nginxproxymanager.sh)"
 ```
 
----
-
-## Configuration
-
-Login to the user interface at <strong>ht<span>tp://</span>192.168.1.100:81</strong>.
-
-Let's configure a new SSL Certificate provided by Cloudflare.
+After installation you can start the container and open the web interface at <strong>ht<span>tp://</span>192.168.1.100:81</strong>.
 
 ::: info
-The default credentials for the web interface are:
+The default credentials for the login are:
 - Email address: <strong>admin<span>@</span>example.com</strong>
 - Password: <strong>changeme</strong>
 :::
+
+## Configuration
 
 ::: warning
 You must forward port <strong>80</strong> and <strong>443</strong> on your router before proceeding.
@@ -33,7 +29,9 @@ You must forward port <strong>80</strong> and <strong>443</strong> on your route
 
 ### Create new SSL Certificate
 
-Go to <strong>SSL Certificates</strong> tab and add new Let's Encrypt Certificate:
+Let's configure a new SSL Certificate provided by Cloudflare.
+
+Go to <strong>SSL Certificates</strong> tab and add new <strong>Let's Encrypt Certificate</strong>:
 
 * Domain Names: <strong>*.example.com</strong>
 * Check <strong>Use a DNS Challenge</strong>

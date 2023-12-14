@@ -36,7 +36,9 @@ export default defineConfig({
       {
         text: 'Docker Container',
         items: [
+          { text: 'Netdata', link: '/docker-container/netdata' },
           { text: 'Nginx Proxy Manager', link: '/docker-container/nginx-proxy-manager' },
+          { text: 'VS Code', link: '/docker-container/vs-code' },
         ],
       },
 
@@ -81,7 +83,9 @@ export default defineConfig({
             text: 'Docker Container',
             collapsed: true,
             items: [
+              { text: 'Netdata', link: '/docker-container/netdata' },
               { text: 'Nginx Proxy Manager', link: '/docker-container/nginx-proxy-manager' },
+              { text: 'VS Code', link: '/docker-container/vs-code' },
             ],
           },
           // ...
