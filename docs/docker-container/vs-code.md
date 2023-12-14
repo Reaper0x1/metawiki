@@ -13,7 +13,6 @@ The installation requires Docker and Docker Compose installed. If you have not i
 ### Docker
 Create the following docker-compose.yml:
 ```yml
----
 version: "2.1"
 services:
   code-server:
