@@ -17,14 +17,25 @@ apt-get install ca-certificates curl gnupg
 ```bash
 install -m 0755 -d /etc/apt/keyrings
 ```
+<br/>
 
+For Debian:
 ```bash
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
 
+For Ubuntu:
+```bash
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
+
+<br/>
+
 ```bash
 chmod a+r /etc/apt/keyrings/docker.gpg
 ```
+
+<br/>
 
 For Debian:
 
@@ -42,6 +53,8 @@ echo \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
+
+<br/>
 
 Now refresh the repository:
 ```bash
