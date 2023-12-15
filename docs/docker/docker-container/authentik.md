@@ -4,13 +4,13 @@
 Authentik is an open-source Identity Provider that emphasizes flexibility and versatility.
 
 ::: info
-The guide refers to the domain <strong>example.com</strong> and the local IP <strong>192.168.1.100</strong>, be sure to change them according to your configuration.
+The guide refers to the domain <code>example.com</code> and the local IP <code>192.168.1.100</code>, be sure to change them according to your configuration.
 :::
 
 ## Docker Compose
 The installation requires Docker and Docker Compose installed. If you have not installed it please check this guide.
 
-Create the following docker-compose.yml:
+Create the following <code>docker-compose.yml</code>:
 ```yml
 version: "3.4"
 
@@ -102,6 +102,7 @@ volumes:
 
 ::: warning
 * If you want to change port make sure to change only the left one (<span style="color:orange"><strong>9000</strong></span>:9000).
+* Change the volumes mappings to your preferences.
 :::
 
 ## Create .env file
@@ -132,7 +133,7 @@ echo "AUTHENTIK_PORT_HTTPS=9443" >> .env
 
 ## Run the container
 
-For version of Docker Compose ≥ 2 use the following command to create and start the container:
+For version of Docker Compose <code>≥ 2</code> use the following command to create and start the container:
 ```bash
 docker compose up -d
 ```
@@ -142,7 +143,7 @@ docker-compose up -d
 ```
 
 ## First login
-Go to authentik web interface using <strong>ht<span>tps://</span>192.168.1.100:9443/if/flow/initial-setup/</strong> and create a new user.
+Go to authentik web interface using <code>ht<span>tps://</span>192.168.1.100:9443/if/flow/initial-setup/</code> and create a new user.
 
 ## Add Authentik to Nginx Proxy Manager
 
@@ -150,11 +151,11 @@ Add authentik to Nginx Proxy Manager referring to [this guide](./nginx-proxy-man
 
 ## Create Provider
 Select <strong>Providers</strong> under <strong>Application</strong> tab on left hand side. Create new <strong>Proxy Provider</strong>:
-* Name: <strong>Your apps name</strong>
-* Authentication flow: <strong>default-authentication-flow</strong> 
-* Authorization flow: <strong>Authorize Application IMPLICIT content</strong>
-* Type: <strong>Forward auth (single application)</strong>
-* External Host: your app address <strong>ht<span>tps://</span>app.example.com/</strong>
+* Name: <code>Your apps name</code>
+* Authentication flow: <code>default-authentication-flow</code> 
+* Authorization flow: <code>Authorize Application IMPLICIT content</code>
+* Type: <code>Forward auth (single application)</code>
+* External Host: your app address <code>ht<span>tps://</span>app.example.com/</code>
 
 Click Finish.
 
@@ -239,14 +240,43 @@ location @goauthentik_proxy_signin {
 
 ::: warning
 Make sure you have changed the authentik proxy pass config. Either you can use internal IP address with port number or public address:
-* proxy_pass <strong>ht<span>tps://</span>auth.example.com/outpost.goauthentik.io</strong>
-* proxy_pass <strong>ht<span>tps://</span>192.168.1.100:9443/outpost.goauthentik.io</strong>
+* proxy_pass <code>ht<span>tps://</span>auth.example.com/outpost.goauthentik.io</code>
+* proxy_pass <code>ht<span>tps://</span>192.168.1.100:9443/outpost.goauthentik.io</code>
 :::
 
-Now you can test your authentication by navigate to <strong>ht<span>tps://</span>app.example.com</strong> (If you are authenticated in Authentik you must log out to test the system).
+Now you can test your authentication by navigate to <code>ht<span>tps://</span>app.example.com</code> (If you are authenticated in Authentik you must log out to test the system).
 
-## Common issues
+## Common Issues
 1. <strong>Getting 500 error after installation</strong>.
 <br/>
     Common cause is Authentik instance is not reachable from NPM installation, You need to make sure both instance have reachability.
     Try to change the Authentik instance address to IP address or hostname with relevant port number.
+
+## Customization
+You can customize the look of the login page.
+
+### Change Background and Layout
+Go to <strong>Flows and Stages</strong> and then <strong>Flows</strong>.
+Select "<strong>default-authentication-flow</strong>" and click edit.
+* <strong>Name</strong> / <strong>Title</strong>: set to whatever you want.
+
+Open the Appearance settings:
+* <strong>Layout</strong>: the style of the login form and background. See 
+<a href="https://goauthentik.io/docs/flow/layouts" target="_blank" rel="noreferrer">here</a> for more info.
+* <strong>Background</strong>: select your custom background image.
+
+Click Update to save your changes.
+
+### Change Branding Settings
+Go to <strong>System</strong> and then <strong>Tenants</strong>.
+
+Click the edit button for the domain <code>authentik-default</code>.
+
+Here you can change:
+* <strong>Title</strong>
+* <strong>Logo</strong>
+* <strong>Favicon</strong>
+
+You can upload logo and favicon assets to the <code>media</code> folder inside your mapping of the [docker compose file](./authentik#docker-compose). I suggest to create a new directory called <code>logos</code> and place the assets inside. Next you can easily reference them using the path <code>/media/logos/logo.png</code>.
+
+Click Update to save your changes.
