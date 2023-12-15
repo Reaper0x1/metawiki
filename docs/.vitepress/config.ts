@@ -40,6 +40,7 @@ export default defineConfig({
           {
             text: 'Docker Container',
             items: [
+              { text: 'Authentik', link: '/docker/docker-container/authentik' },
               { text: 'Deluge', link: '/docker/docker-container/deluge' },
               { text: 'Netdata', link: '/docker/docker-container/netdata' },
               { text: 'Nginx Proxy Manager', link: '/docker/docker-container/nginx-proxy-manager' },
@@ -95,6 +96,7 @@ export default defineConfig({
                 text: 'Docker Container',
                 collapsed: true,
                 items: [
+                  { text: 'Authentik', link: '/docker/docker-container/authentik' },
                   { text: 'Deluge', link: '/docker/docker-container/deluge' },
                   { text: 'Netdata', link: '/docker/docker-container/netdata' },
                   { text: 'Nginx Proxy Manager', link: '/docker/docker-container/nginx-proxy-manager' },
