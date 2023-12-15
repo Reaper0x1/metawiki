@@ -7,10 +7,9 @@ The Nginx Proxy Manager conveniently manages proxy hosts for your web services, 
 The guide refers to the domain <strong>example.com</strong> and the local IP <strong>192.168.1.100</strong>, be sure to change them according to your configuration.
 :::
 
-## Installation
+## Docker Compose
 The installation requires Docker and Docker Compose installed. If you have not installed it please check this guide.
 
-### Docker
 Create the following docker-compose.yml:
 ```yml
 version: '3'
@@ -32,6 +31,7 @@ services:
 * Update the volumes to your desired location (only left path).
 :::
 
+## Run the container
 For version of Docker Compose ≥ 2 use the following command to create and start the container:
 ```bash
 docker compose up -d
@@ -49,13 +49,12 @@ The default credentials for the login are:
 - Password: <strong>changeme</strong>
 :::
 
-## Configuration
+
+## Configure SSL Certificate
 
 ::: warning
 You must forward port <strong>80</strong> and <strong>443</strong> on your router before proceeding.
 :::
-
-### Create new SSL Certificate
 
 Let's configure a new SSL Certificate provided by Cloudflare.
 
@@ -77,7 +76,7 @@ Go to <strong>SSL Certificates</strong> tab and add new <strong>Let's Encrypt Ce
 
 Go to <strong>Settings</strong> tab and change the default site to <strong>404 Page</strong>.
 
-### Add new Host
+## Add new Host
 
 We are going to set up the first DNS entry pointing to Nginx Proxy Manager installation.
 

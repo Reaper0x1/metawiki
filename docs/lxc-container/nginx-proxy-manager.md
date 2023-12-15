@@ -21,13 +21,10 @@ The default credentials for the login are:
 - Password: <strong>changeme</strong>
 :::
 
-## Configuration
-
+## Create new SSL Certificate
 ::: warning
 You must forward port <strong>80</strong> and <strong>443</strong> on your router before proceeding.
 :::
-
-### Create new SSL Certificate
 
 Let's configure a new SSL Certificate provided by Cloudflare.
 
@@ -49,7 +46,7 @@ Go to <strong>SSL Certificates</strong> tab and add new <strong>Let's Encrypt Ce
 
 Go to <strong>Settings</strong> tab and change the default site to <strong>404 Page</strong>.
 
-### Add new Host
+## Add new Host
 
 We are going to set up the first DNS entry pointing to Nginx Proxy Manager installation.
 

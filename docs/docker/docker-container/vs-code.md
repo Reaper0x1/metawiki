@@ -7,10 +7,9 @@ Visual Studio Code is a code editor redefined and optimized for building and deb
 The guide refers to the domain <strong>example.com</strong> and the local IP <strong>192.168.1.100</strong>, be sure to change them according to your configuration.
 :::
 
-## Installation
+## Docker Compose
 The installation requires Docker and Docker Compose installed. If you have not installed it please check this guide.
 
-### Docker
 Create the following docker-compose.yml:
 ```yml
 version: "2.1"
@@ -42,6 +41,7 @@ services:
 * Update 'your-workspace-location' to your workspation location.
 :::
 
+## Run the container
 For version of Docker Compose ≥ 2 use the following command to create and start the container:
 ```bash
 docker compose up -d
