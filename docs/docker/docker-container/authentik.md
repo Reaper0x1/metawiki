@@ -101,8 +101,8 @@ volumes:
 ```
 
 ::: warning
-* If you want to change port make sure to change only the left one (<span style="color:orange"><strong>9000</strong></span>:9000).
-* Change the volumes mappings to your preferences.
+* If you want to change <code>port</code> make sure to change only the left one (<span style="color:orange"><strong>9000</strong></span>:9000).
+* Change the <code>volumes</code> mappings to your preferences.
 :::
 
 ## Create .env file

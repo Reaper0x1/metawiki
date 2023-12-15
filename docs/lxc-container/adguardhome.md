@@ -15,3 +15,4 @@ bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/adguard.sh)"
 Keep all default configs.
 :::
 
+

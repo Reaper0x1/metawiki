@@ -4,13 +4,13 @@
 Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.
 
 ::: info
-The guide refers to the domain <strong>example.com</strong> and the local IP <strong>192.168.1.100</strong>, be sure to change them according to your configuration.
+The guide refers to the domain <code>example.com</code> and the local IP <code>192.168.1.100</code>, be sure to change them according to your configuration.
 :::
 
 ## Docker Compose
 The installation requires Docker and Docker Compose installed. If you have not installed it please check this guide.
 
-Create the following docker-compose.yml:
+Create the following <code>docker-compose.yml</code>:
 ```yml
 version: "2.1"
 services:
@@ -34,15 +34,15 @@ services:
 ```
 
 ::: warning
-* If you want to change port make sure to change only the left one (<span style="color:orange"><strong>8443</strong></span>:8443).
-* Set a password for <strong>PASSWORD</strong> and <strong>SUDO_PASSWORD</strong> rows.
-* If you have a public domain set <strong>PROXY_DOMAIN</strong> to your subdomain that will point to the Code server. If not, you can delete the row.
-* Update 'your-config-location' to your desired location for configuration files.
-* Update 'your-workspace-location' to your workspation location.
+* If you want to change <code>port</code> make sure to change only the left one (<span style="color:orange"><strong>8443</strong></span>:8443).
+* Set a password for <code>PASSWORD</code> and <code>SUDO_PASSWORD</code> rows.
+* If you have a public domain set <code>PROXY_DOMAIN</code> to your subdomain that will point to the VS Code server. If not, you can delete the row.
+* Update <code>your-config-location</code> to your desired location for configuration files.
+* Update <code>your-workspace-location</code> to your workspation location.
 :::
 
 ## Run the container
-For version of Docker Compose ≥ 2 use the following command to create and start the container:
+For version of Docker Compose <code>≥ 2</code> use the following command to create and start the container:
 ```bash
 docker compose up -d
 ```
@@ -51,4 +51,4 @@ For older versions use:
 docker-compose up -d
 ```
 
-After initialization you can open whe web interface at <strong>ht<span>tp://</span>192.168.1.100:8443</strong>
+After initialization you can open whe web interface at <code>ht<span>tp://</span>192.168.1.100:8443</code>
