@@ -12,22 +12,21 @@
     "docs:dev": {
       "name": "docs:dev",
       "command": "npm run docs:dev",
-      "runAtStart": false
+      "preview": {
+        "port": 5173
+      }
     },
     "docs:build": {
       "name": "docs:build",
-      "command": "npm run docs:build",
-      "runAtStart": false
+      "command": "npm run docs:build"
     },
     "docs:serve": {
       "name": "docs:serve",
-      "command": "npm run docs:serve",
-      "runAtStart": false
+      "command": "npm run docs:serve"
     },
     "docs:preview": {
       "name": "docs:preview",
-      "command": "npm run docs:preview",
-      "runAtStart": false
+      "command": "npm run docs:preview"
     }
   }
 }
