@@ -106,27 +106,29 @@ volumes:
 :::
 
 ## Create .env file
-```yml
+```bash
 sudo apt-get install -y pwgen
 ```
-```yml
+```bash
 echo "PG_PASS=$(pwgen -s 40 1)" >> .env
 
 ```
-```yml
+```bash
 echo "AUTHENTIK_SECRET_KEY=$(pwgen -s 50 1)" >> .env
 ```
 
 Skip this if you don't want to enable error reporting.
 
-```yml
+```bash
 echo "AUTHENTIK_ERROR_REPORTING__ENABLED=true" >> .env
 ```
 
 ::: warning
 If you changed the default ports, you need to add the following variables to the .env file:
-```yml
+```bash
 echo "AUTHENTIK_PORT_HTTP=9090" >> .env
+```
+```bash
 echo "AUTHENTIK_PORT_HTTPS=9443" >> .env
 ```
 :::
