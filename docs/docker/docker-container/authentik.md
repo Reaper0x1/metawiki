@@ -179,7 +179,7 @@ Select you application under <strong>Application</strong> tab. if you have multi
 
 Make sure the configuration on the bottom to set <code>authentik_host</code> to match your external domain (if configured).
 ```yaml
-authentik_host: https://auth.metaserver.tech
+authentik_host: https://auth.example.com
 ```
 
 Once done update.
