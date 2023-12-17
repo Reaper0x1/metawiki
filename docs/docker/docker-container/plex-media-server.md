@@ -57,7 +57,6 @@ After initialization you can open whe web interface at <code>ht<span>tp://</span
 :::
 
 ### Install Scanner and Agent
-\
 Install the <a href="https://docs.theme-park.dev/themes/plex/" target="_blank" rel="noreferrer">Absolute-Series-Scanner (ASS)</a> which has the job to map the files to the right episodes and seasons:
 
 1. Locate the **Plex system folder**. If you followed this guide your config will be at location <code>/config/Library/Application Support/Plex Media Server</code>. 
@@ -84,7 +83,7 @@ Edit permissions:
 chmod 777 ./Hama.bundle
 ```
 
-Restart Plex
+Restart Plex.
 
 
 ### Folder Structure
@@ -152,7 +151,7 @@ In each arc directory, place the <code>tvdb4.mapping</code> file. (You could als
 Each episode file must be renamed inf this format: <code>One.Piece.E1.1080p.mp4</code>.
 :::
 
-### Add Anime library
+### Add library
 Go to Plex > <code>Settings</code> > <code>Manage</code> > <code>Libraries</code> and click <code>Add library</code>.
 
 Select the type and folder location and then in the <code>Advanced</code> tab set this values:
