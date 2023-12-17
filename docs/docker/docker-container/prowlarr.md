@@ -1,7 +1,7 @@
 # Prowlarr <img src="/prowlarr-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
 
 
-Radarr makes failed downloads a thing of the past. Password protected releases, missing repair blocks or virtually any other reason? no worries.
+Prowlarr is an indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps.
 
 ::: info
 The guide refers to the domain <code>example.com</code> and the local IP <code>192.168.1.110</code>, be sure to change them according to your configuration.
