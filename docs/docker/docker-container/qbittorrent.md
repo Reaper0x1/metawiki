@@ -64,18 +64,10 @@ Set a new password and click save at the bottom.
 
 
 ## Customization
-If you want a dark theme for the web interface follow the steps below:
-
-Enter the directory <code>your-themes-directory</code> and download the theme:
-```bash
-git clone https://github.com/dracula/qbittorrent.git
+You can change the theme of Plex web application by adding these variables to the <code>docker-compose.yml</code> file:
+```yml
+- DOCKER_MODS=ghcr.io/gilbn/theme.park:qbittorrent
+- TP_THEME=dracula
 ```
+ For other themes visit <a href="https://docs.theme-park.dev/themes/plex/" target="_blank" rel="noreferrer">this page</a>.
 
-Change the files permission:
-```bash
-chmod -R 777 qbittorrent
-```
-
-Enable theme selection from menu: → Tools → Options → Web UI → <code>Use alternative Web UI</code>.
-
-In the 'Files locations' bar, you should type <code>/opt/qbittorrent/webui</code>
