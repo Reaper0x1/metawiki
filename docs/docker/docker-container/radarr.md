@@ -52,14 +52,6 @@ docker-compose up -d
 
 After initialization you can open whe web interface at <code>ht<span>tp://</span>192.168.1.110:7878</code>
 
-## Customization
-You can change the theme of Plex web application by adding these variables to the <code>docker-compose.yml</code> file:
-```yml
-- DOCKER_MODS=ghcr.io/gilbn/theme.park:radarr
-- TP_THEME=dracula
-```
- For other themes visit <a href="https://docs.theme-park.dev/themes/plex/" target="_blank" rel="noreferrer">this page</a>.
-
 ## qBittorrent Integration (Download Client)
 Radarr needs a download client to automatically downloads movies for you.
 
@@ -78,4 +70,12 @@ If you change [qBittorrent](./qbittorrent#docker-compose) port or your ip is dif
 ## Prowlarr Integration (Indexer)
 Radarr needs indexer to be able to do queries and find torrent movies for you and automatically add them to your download client.
 
-To add Prowlarr as your main indexer follow [this guide](./prowlarr).
+To add Prowlarr as your main indexer follow [this guide](./prowlarr#radarr-and-sonarr-integration).
+
+## Customization
+You can change the theme of Plex web application by adding these variables to the <code>docker-compose.yml</code> file:
+```yml
+- DOCKER_MODS=ghcr.io/gilbn/theme.park:radarr
+- TP_THEME=dracula
+```
+ For other themes visit <a href="https://docs.theme-park.dev/themes/plex/" target="_blank" rel="noreferrer">this page</a>.
