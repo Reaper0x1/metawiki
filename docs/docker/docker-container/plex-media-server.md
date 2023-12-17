@@ -143,7 +143,8 @@ Create the <code>tvdb4.mapping</code> file like this one:
 29|0747|0776|Zou Arc
 30|0777|0877|Whole Cake Island Arc
 31|0878|0889|Reverie Arc
-32|0890|1100|Wano Arc (unknown length)
+32|0890|1085|Wano Arc
+33|1086|1300|Egghead Arc (unknown length)
 ```
 
 In each arc directory, place the <code>tvdb4.mapping</code> file. (You could also not use the arcs directory and keep all you episodes in the same folder, and have the <code>tvdb4.mapping</code> directly in the <code>One Piece [tvdb4-81797]</code> folder)
