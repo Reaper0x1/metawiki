@@ -53,6 +53,16 @@ export default defineConfig({
                 text: "Nginx Proxy Manager",
                 link: "/docker/docker-container/nginx-proxy-manager",
               },
+              {
+                text: "Plex Media Server",
+                link: "/docker/docker-container/plex-media-server",
+              },
+              { text: "Prowlarr", link: "/docker/docker-container/prowlarr" },
+              {
+                text: "qBittorrent",
+                link: "/docker/docker-container/qbittorrent",
+              },
+              { text: "Radarr", link: "/docker/docker-container/radarr" },
               { text: "VS Code", link: "/docker/docker-container/vs-code" },
             ],
           },
@@ -126,6 +136,19 @@ export default defineConfig({
                     text: "Nginx Proxy Manager",
                     link: "/docker/docker-container/nginx-proxy-manager",
                   },
+                  {
+                    text: "Plex Media Server",
+                    link: "/docker/docker-container/plex-media-server",
+                  },
+                  {
+                    text: "Prowlarr",
+                    link: "/docker/docker-container/prowlarr",
+                  },
+                  {
+                    text: "qBittorrent",
+                    link: "/docker/docker-container/qbittorrent",
+                  },
+                  { text: "Radarr", link: "/docker/docker-container/radarr" },
                   { text: "VS Code", link: "/docker/docker-container/vs-code" },
                 ],
               },
