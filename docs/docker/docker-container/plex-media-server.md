@@ -56,6 +56,8 @@ After initialization you can open whe web interface at <code>ht<span>tp://</span
 <code>One Piece</code> anime is used as an example.
 :::
 
+<a href="https://github.com/Matroxt/one-pace-to-plex" target="_blank" rel="noreferrer">Source guide</a>
+
 ### Install Scanner and Agent
 Install the <a href="https://docs.theme-park.dev/themes/plex/" target="_blank" rel="noreferrer">Absolute-Series-Scanner (ASS)</a> which has the job to map the files to the right episodes and seasons:
 
@@ -84,7 +86,6 @@ chmod 777 ./Hama.bundle
 ```
 
 Restart Plex.
-
 
 ### Folder Structure
 As usual with Plex, the folder structure and naming is very important. Here's the one we'll be using:
@@ -161,7 +162,6 @@ Select the type and folder location and then in the <code>Advanced</code> tab se
 If not cover are fetched you can try to enable <code>Load all poster metadata sources</code>
 
 Now you can add the library and manually scan the library if not already started automatically.
-
 
 ## Customization
 You can change the theme of Plex web application by adding these variables to the <code>docker-compose.yml</code> file:
