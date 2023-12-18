@@ -205,7 +205,7 @@ It should return something like this:
 ```
 In this case we are looking for <code>nginx-proxy-manager-app-1</code>.
 If we associate the same id we can find the <code>nginx.conf</code> file is located at:
-```bash
+```text
 /var/lib/docker/overlay2/0b7809a7b193ec3965ba6eed49235c018e3b996df1052ca37c9a225dcd286d11/merged/etc/nginx/nginx.conf
 ```
 

@@ -67,6 +67,10 @@ export default defineConfig({
               { text: "VS Code", link: "/docker/docker-container/vs-code" },
             ],
           },
+          {
+            text: "Extra Configuration",
+            link: "/docker/extra-configuration.md",
+          },
         ],
       },
 
@@ -156,6 +160,10 @@ export default defineConfig({
                   { text: "Radarr", link: "/docker/docker-container/radarr" },
                   { text: "VS Code", link: "/docker/docker-container/vs-code" },
                 ],
+              },
+              {
+                text: "Extra Configuration",
+                link: "/docker/extra-configuration.md",
               },
             ],
           },
