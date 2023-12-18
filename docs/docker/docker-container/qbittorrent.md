@@ -1,6 +1,6 @@
 # qBittorrent <img src="/qbittorrent-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
 
-Plex is your destination to stream TV shows, movies, and sports. Find great movies to watch and stream all your personal media libraries on every device.
+The qBittorrent project aims to provide an open-source software alternative to µTorrent.
 
 ::: info
 The guide refers to the domain <code>example.com</code> and the local IP <code>192.168.1.110</code>, be sure to change them according to your configuration.
