@@ -53,6 +53,10 @@ export default defineConfig({
               { text: "Authentik", link: "/docker/docker-container/authentik" },
               { text: "Deluge", link: "/docker/docker-container/deluge" },
               { text: "Fail2Ban", link: "/docker/docker-container/fail2ban" },
+              {
+                text: "Homepage",
+                link: "/docker/docker-container/homepage",
+              },
               { text: "Netdata", link: "/docker/docker-container/netdata" },
               {
                 text: "Nginx Proxy Manager",
@@ -151,6 +155,10 @@ export default defineConfig({
                   {
                     text: "Fail2Ban",
                     link: "/docker/docker-container/fail2ban",
+                  },
+                  {
+                    text: "Homepage",
+                    link: "/docker/docker-container/homepage",
                   },
                   { text: "Netdata", link: "/docker/docker-container/netdata" },
                   {
