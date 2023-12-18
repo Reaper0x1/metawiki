@@ -43,3 +43,27 @@ docker-compose up -d
 
 After initialization you can open whe web interface at <code>ht<span>tp://</span>192.168.1.104:3000</code>
 
+## Configuration
+Full guide <a href="https://gethomepage.dev" target="_blank" rel="noreferrer">here</a>.
+
+## Add external Docker socket
+::: warning
+Before starting, you must have followed [this guide](../extra-configuration.md#enable-tcp-port-2375-for-external-connection-to-docker) on exposing docker socket port for remote communication.
+:::
+
+Edit <code>docker.yaml</code> in Homepage confi folder and add:
+```yaml
+my-docker:
+   host: 192.168.1.111
+   port: 2375
+```
+Replace <code>my-docker</code> with your preferred one and then replace <code>192.168.1.111</code> with the IP address of your remote docker.
+
+Now you can use the docker integration within <code>services.yaml</code>:
+```yaml
+- Emby:
+    href: "http://emby.home/"
+    description: Media server
+    server: my-docker # The docker server that was configured
+    container: plex # The name of the container you'd like to connect
+```
