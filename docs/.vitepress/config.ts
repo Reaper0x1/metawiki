@@ -31,6 +31,10 @@ export default defineConfig({
             items: [
               { text: "AdGuard Home", link: "/lxc-container/adguardhome" },
               {
+                text: "MariaDB",
+                link: "/lxc-container/mariadb",
+              },
+              {
                 text: "Nginx Proxy Manager",
                 link: "/lxc-container/nginx-proxy-manager",
               },
@@ -53,6 +57,10 @@ export default defineConfig({
               {
                 text: "Nginx Proxy Manager",
                 link: "/docker/docker-container/nginx-proxy-manager",
+              },
+              {
+                text: "phpMyAdmin",
+                link: "/docker/docker-container/phpmyadmin",
               },
               {
                 text: "Plex Media Server",
@@ -114,6 +122,10 @@ export default defineConfig({
                 items: [
                   { text: "AdGuard Home", link: "/lxc-container/adguardhome" },
                   {
+                    text: "MariaDB",
+                    link: "/lxc-container/mariadb",
+                  },
+                  {
                     text: "Nginx Proxy Manager",
                     link: "/lxc-container/nginx-proxy-manager",
                   },
@@ -144,6 +156,10 @@ export default defineConfig({
                   {
                     text: "Nginx Proxy Manager",
                     link: "/docker/docker-container/nginx-proxy-manager",
+                  },
+                  {
+                    text: "phpMyAdmin",
+                    link: "/docker/docker-container/phpmyadmin",
                   },
                   {
                     text: "Plex Media Server",
