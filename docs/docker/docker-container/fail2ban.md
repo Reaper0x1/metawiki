@@ -1,7 +1,7 @@
 # Fail2Ban <img src="/fail2ban-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
 
 
-Netdata is a distributed real-time, health monitoring platform for systems, hardware, containers & applications, collecting metrics.
+Fail2Ban scans log files like /var/log/auth.log and bans IP addresses conducting too many failed login attempts. It does this by updating system firewall rules to reject new connections from those IP addresses, for a configurable amount of time.
 
 ::: info
 The guide refers to the domain <code>example.com</code> and the local IP <code>192.168.1.100</code>, be sure to change them according to your configuration.
