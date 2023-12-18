@@ -1,6 +1,7 @@
 # Extra Configuration
 
 ## Enable TCP port 2375 for external connection to Docker
+To add a new remote environment to Portainer, all external docker machine must have port 2375 opened to be able to connect to the daemon.
 
 Create <code>daemon.json</code> file in <code>/etc/docker</code>.
 ```json
