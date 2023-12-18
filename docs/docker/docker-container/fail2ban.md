@@ -15,7 +15,7 @@ Create the following <code>docker-compose.yml</code>:
 version: "2.1"
 services:
   fail2ban:
-    image: lscr.io/linuxserver/fail2ban:latest
+    image: crazymax/fail2ban:latest
     container_name: fail2ban
     network_mode: "host"
     cap_add:
@@ -205,8 +205,9 @@ It should return something like this:
 ```
 In this case we are looking for <code>nginx-proxy-manager-app-1</code>.
 If we associate the same id we can find the <code>nginx.conf</code> file is located at:
-
-<code>/var/lib/docker/overlay2/0b7809a7b193ec3965ba6eed49235c018e3b996df1052ca37c9a225dcd286d11/merged/etc/nginx/nginx.conf</code>
+```bash
+/var/lib/docker/overlay2/0b7809a7b193ec3965ba6eed49235c018e3b996df1052ca37c9a225dcd286d11/merged/etc/nginx/nginx.conf
+```
 
 We are going to edit this file:
 ```bash
