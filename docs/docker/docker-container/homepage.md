@@ -46,7 +46,7 @@ After initialization you can open whe web interface at <code>ht<span>tp://</span
 ## Configuration
 Full guide <a href="https://gethomepage.dev" target="_blank" rel="noreferrer">here</a>.
 
-## Add external Docker socket
+### Add external Docker socket
 ::: warning
 Before starting, you must have followed [this guide](../extra-configuration.md#enable-tcp-port-2375-for-external-connection-to-docker) on exposing docker socket port for remote communication.
 :::
