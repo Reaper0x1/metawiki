@@ -41,6 +41,4 @@ AllowedIPs = 0.0.0.0/0, ::/0, 192.168.1.0/24
 Endpoint = xxx.xxx.xxx.xxx:51820
 PersistentKeepalive = 25
 ```
-You need to add <code>192.168.1.0/24</code> (CIDR notation) to <code>AllowedIPs</code>. Make sure that the IP matches your local network.
-
-[go](http://stackoverflow.com){:target="_blank" rel="noopener"}
+You need to add <code>192.168.1.0/24</code> (<a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing" target="_blank" rel="noreferrer">CIDR</a> notation) to <code>AllowedIPs</code>. Make sure that the IP matches your local network.
