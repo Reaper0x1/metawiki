@@ -41,6 +41,10 @@ export default defineConfig({
                 text: "Nginx Proxy Manager",
                 link: "/proxmox/lxc-container/nginx-proxy-manager",
               },
+              {
+                text: "Wireguard",
+                link: "/proxmox/lxc-container/wireguard",
+              },
             ],
           },
           { text: "Notes", link: "/proxmox/notes" },
@@ -138,6 +142,10 @@ export default defineConfig({
                   {
                     text: "Nginx Proxy Manager",
                     link: "/proxmox/lxc-container/nginx-proxy-manager",
+                  },
+                  {
+                    text: "Wireguard",
+                    link: "/proxmox/lxc-container/wireguard",
                   },
                 ],
               },
