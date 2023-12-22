@@ -29,14 +29,17 @@ export default defineConfig({
           {
             text: "LXC Container",
             items: [
-              { text: "AdGuard Home", link: "/lxc-container/adguardhome" },
+              {
+                text: "AdGuard Home",
+                link: "/proxmox/lxc-container/adguardhome",
+              },
               {
                 text: "MariaDB",
-                link: "/lxc-container/mariadb",
+                link: "/proxmox/lxc-container/mariadb",
               },
               {
                 text: "Nginx Proxy Manager",
-                link: "/lxc-container/nginx-proxy-manager",
+                link: "/proxmox/lxc-container/nginx-proxy-manager",
               },
             ],
           },
@@ -124,14 +127,17 @@ export default defineConfig({
                 text: "LXC Container",
                 collapsed: true,
                 items: [
-                  { text: "AdGuard Home", link: "/lxc-container/adguardhome" },
+                  {
+                    text: "AdGuard Home",
+                    link: "/proxmox/lxc-container/adguardhome",
+                  },
                   {
                     text: "MariaDB",
-                    link: "/lxc-container/mariadb",
+                    link: "/proxmox/lxc-container/mariadb",
                   },
                   {
                     text: "Nginx Proxy Manager",
-                    link: "/lxc-container/nginx-proxy-manager",
+                    link: "/proxmox/lxc-container/nginx-proxy-manager",
                   },
                 ],
               },
