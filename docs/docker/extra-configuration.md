@@ -9,6 +9,13 @@ Create <code>daemon.json</code> file in <code>/etc/docker</code>.
 ```
 
 Create <code>/etc/systemd/system/docker.service.d/override.conf</code>:
+```bash
+mkdir /etc/systemd/system/docker.service.d
+```
+```bash
+nano /etc/systemd/system/docker.service.d/override.conf
+```
+Paste this inside the <code>override.conf</code>
 ```text
 [Service]
 ExecStart=
