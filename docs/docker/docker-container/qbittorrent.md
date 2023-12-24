@@ -7,7 +7,7 @@ The guide refers to the domain <code>example.com</code> and the local IP <code>1
 :::
 
 ## Docker Compose
-The installation requires Docker and Docker Compose installed. If you have not installed it please check this guide.
+The installation requires Docker and Docker Compose installed. If you have not installed it please check [this guide](../docker.md).
 
 Create the following <code>docker-compose.yml</code>:
 ```yml
