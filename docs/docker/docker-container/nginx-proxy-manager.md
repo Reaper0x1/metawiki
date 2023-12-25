@@ -97,7 +97,7 @@ Next, go to <strong>Host</strong> tab -> <strong>Proxy Host</strong> and create 
 * Scheme: <code>http</code>
 * Forward Hostname / IP: <code>192.168.1.100</code>
 * Forward Port: <code>81</code>
-* Enable <code>Cache Assets</code>, <code>Block Common Exploits</code> and <code>Websocket support</code>
+* Enable <code>Block Common Exploits</code> and <code>Websocket support</code>
 
 <strong>SSL</strong>
 * SSL Certificate: select the one created before: <code>*.example.com</code>

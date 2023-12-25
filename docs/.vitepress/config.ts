@@ -58,6 +58,7 @@ export default defineConfig({
           {
             text: "Docker Container",
             items: [
+              { text: "Authelia", link: "/docker/docker-container/authelia" },
               { text: "Authentik", link: "/docker/docker-container/authentik" },
               { text: "Deluge", link: "/docker/docker-container/deluge" },
               { text: "Fail2Ban", link: "/docker/docker-container/fail2ban" },
@@ -166,6 +167,10 @@ export default defineConfig({
                 text: "Docker Container",
                 collapsed: true,
                 items: [
+                  {
+                    text: "Authelia",
+                    link: "/docker/docker-container/authelia",
+                  },
                   {
                     text: "Authentik",
                     link: "/docker/docker-container/authentik",
