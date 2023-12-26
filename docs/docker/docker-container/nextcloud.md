@@ -195,3 +195,11 @@ php_value max_input_time 3600
 php_value max_execution_time 3600
 ```
 Make sure to set <code>memory_limit</code> based on your system.
+
+## Create Token for external monitoring
+Run this command inside nextcloud installation/container:
+```bash
+sudo -u www-data php occ config:app:set serverinfo token --value token-name
+```
+
+Next you can use <code>token-name</code> as your token. 
