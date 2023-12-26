@@ -71,6 +71,7 @@ export default defineConfig({
                 link: "/docker/docker-container/homepage",
               },
               { text: "Netdata", link: "/docker/docker-container/netdata" },
+              { text: "Nextcloud", link: "/docker/docker-container/nextcloud" },
               {
                 text: "Nginx Proxy Manager",
                 link: "/docker/docker-container/nginx-proxy-manager",
@@ -189,6 +190,10 @@ export default defineConfig({
                     link: "/docker/docker-container/homepage",
                   },
                   { text: "Netdata", link: "/docker/docker-container/netdata" },
+                  {
+                    text: "Nextcloud",
+                    link: "/docker/docker-container/nextcloud",
+                  },
                   {
                     text: "Nginx Proxy Manager",
                     link: "/docker/docker-container/nginx-proxy-manager",
