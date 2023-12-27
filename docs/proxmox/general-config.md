@@ -12,3 +12,15 @@
 nano /etc/pve/lxc/<LXC_NUMBER>.conf
 ```
 
+## Enable Tun Interface
+Edit the LXC configuration file like above.
+Add those lines:
+```txt
+lxc.cgroup2.devices.allow: c 10:200 rwm
+lxc.mount.entry: /dev/net dev/net none bind,create=dir
+```
+Now start/restart the container.
+
+This guide assumes that the container is privileged.
+
+Full guide <a href="https://pve.proxmox.com/wiki/OpenVPN_in_LXC" target="_blank" rel="noreferrer">here</a>.

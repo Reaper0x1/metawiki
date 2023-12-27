@@ -66,6 +66,7 @@ export default defineConfig({
                 text: "FireflyIII",
                 link: "/docker/docker-container/fireflyiii",
               },
+              { text: "Gluetun", link: "/docker/docker-container/gluetun" },
               {
                 text: "Homepage",
                 link: "/docker/docker-container/homepage",
@@ -185,6 +186,7 @@ export default defineConfig({
                     text: "FireflyIII",
                     link: "/docker/docker-container/fireflyiii",
                   },
+                  { text: "Gluetun", link: "/docker/docker-container/gluetun" },
                   {
                     text: "Homepage",
                     link: "/docker/docker-container/homepage",

@@ -12,9 +12,7 @@ The installation requires Docker and Docker Compose installed. If you have not i
 
 Create the following <code>docker-compose.yml</code>:
 
-<details class="details" open>
-<summary>Default</summary>
-
+::: details Default
 ```yml
 version: '2'
 services:
@@ -46,11 +44,9 @@ services:
       - MYSQL_USER=nextcloud
       - MYSQL_HOST=db
 ```
-</details>
+:::
 
-<details class="details">
-<summary>For Raspberry Pi</summary>
-
+::: details For Raspberry Pi
 ```yml
 version: '2'
 
@@ -88,7 +84,7 @@ services:
       - MYSQL_USER=nextcloud
       - MYSQL_HOST=db
 ```
-</details>
+:::
 
 
 ::: warning
