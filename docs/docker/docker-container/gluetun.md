@@ -34,9 +34,41 @@ services:
       # OpenVPN:
       - OPENVPN_CUSTOM_CONFIG=/gluetun/custom.ovpn
       - OPENVPN_USER="username"
+      - UPDATER_PERIOD=24h
       - OPENVPN_PASSWORD="password"
       - TZ=Europe/Rome
 ```
+:::
+
+::: details NordVPN
+```yml
+version: "3"
+services:
+  gluetun:
+    image: qmcgaw/gluetun
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    ports:
+      - 8000:8000/tcp # HTTP control server (optional)
+      - 8888:8888/tcp # HTTP proxy
+      - 8388:8388/tcp # Shadowsocks
+      - 8388:8388/udp # Shadowsocks
+    volumes:
+      - /your-config-location:/gluetun
+    environment:
+      - VPN_SERVICE_PROVIDER=nordvpn
+      - VPN_TYPE=openvpn
+      - OPENVPN_USER="service-username"
+      - OPENVPN_PASSWORD="service-password"
+      - SERVER_COUNTRIES=Italy
+      - UPDATER_PERIOD=24h
+      - OPENVPN_PASSWORD="password"
+      - TZ=Europe/Rome
+```
+
+-> <code>service-username</code> and <code>service-password</code> can be found on NordVPN website under "Manual Configuration"
 :::
 
 ::: warning
@@ -102,6 +134,7 @@ services:
       - OPENVPN_CUSTOM_CONFIG=/gluetun/custom.ovpn
       - OPENVPN_USER="username"
       - OPENVPN_PASSWORD="password"
+      - UPDATER_PERIOD=24h
       - FIREWALL_OUTBOUND_SUBNETS=172.23.0.0/16,192.168.1.0/24
       - TZ=Europe/Rome
     network_mode: gluetunbridge
@@ -154,6 +187,7 @@ services:
       - OPENVPN_CUSTOM_CONFIG=/gluetun/custom.ovpn
       - OPENVPN_USER="username"
       - OPENVPN_PASSWORD="password"
+      - UPDATER_PERIOD=24h
       - FIREWALL_OUTBOUND_SUBNETS=172.23.0.0/16,192.168.1.0/24
       - TZ=Europe/Rome
     network_mode: gluetunbridge
