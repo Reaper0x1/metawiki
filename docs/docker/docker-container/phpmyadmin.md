@@ -27,7 +27,7 @@ services:
       - PMA_PORT=3306
 ```
 
-::: warning
+::: info
 * If you want to change <code>port</code> make sure to change only the left one (<span style="color:orange"><strong>7171</strong></span>:7171).
 * Update <code>PMA_HOST</code> with the IP of your database.
 * Update <code>PMA_PORT</code> with the port of your database.

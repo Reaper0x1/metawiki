@@ -87,7 +87,7 @@ services:
 :::
 
 
-::: warning
+::: info
 * If you want to change <code>port</code> make sure to change only the left one (<span style="color:orange"><strong>8080</strong></span>:80).
 * Update <code>your-config-location</code> and <code>your-db-config-location</code>  to your desired location for configuration files.
 * Set a password for the fields <code>MYSQL_PASSWORD</code> and  <code>MYSQL_ROOT_PASSWORD</code>. Make sure they are the same between <code>db</code> and <code>app</code> services.

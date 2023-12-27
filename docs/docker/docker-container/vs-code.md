@@ -33,7 +33,7 @@ services:
     restart: unless-stopped
 ```
 
-::: warning
+::: info
 * If you want to change <code>port</code> make sure to change only the left one (<span style="color:orange"><strong>8443</strong></span>:8443).
 * Set a password for <code>PASSWORD</code> and <code>SUDO_PASSWORD</code> rows.
 * If you have a public domain set <code>PROXY_DOMAIN</code> to your subdomain that will point to the VS Code server. If not, you can delete the row.

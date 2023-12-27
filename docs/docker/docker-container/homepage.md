@@ -26,7 +26,7 @@ services:
     restart: unless-stopped
 ```
 
-::: warning
+::: info
 * If you want to change <code>port</code> make sure to change only the left one (<span style="color:orange"><strong>3000</strong></span>:3000).
 * Update <code>your-config-location</code> to your desired location for configuration files.
 :::

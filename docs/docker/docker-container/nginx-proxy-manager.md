@@ -26,7 +26,7 @@ services:
       - ./letsencrypt:/etc/letsencrypt
 ```
 
-::: warning
+::: info
 * If you want to change <code>port</code> make sure to change only the left one (<span style="color:orange"><strong>80</strong></span>:80).
 * Update the <code>volumes</code> to your desired location (only left path).
 :::

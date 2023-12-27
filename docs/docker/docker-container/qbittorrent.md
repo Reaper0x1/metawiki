@@ -31,7 +31,7 @@ services:
     restart: unless-stopped
 ```
 
-::: warning
+::: info
 * Update <code>PUID</code> and <code>GUID</code> accordingly to your system.
 * Update <code>your-config-location</code> to your desired location for configuration files.
 * Update <code>your-downloads-location</code> to your downloads folder location.
@@ -71,3 +71,5 @@ You can change the theme of Plex web application by adding these variables to th
 ```
  For other themes visit <a href="https://docs.theme-park.dev/themes/plex/" target="_blank" rel="noreferrer">this page</a>.
 
+## Run behind VPN
+See [this guide](./gluetun.md#route-container-to-vpn-qbittorrent).

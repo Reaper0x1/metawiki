@@ -29,7 +29,7 @@ services:
     restart: always
 ```
 
-::: warning
+::: info
 * If you want to change <code>port</code> make sure to change only the left one (<span style="color:orange"><strong>9091</strong></span>:9091).
 * Update <code>TZ</code> to match your timezone.
 * Update <code>your-config-location</code> to your desired location for configuration files.
@@ -147,7 +147,7 @@ notifier:
       minimum_version: TLS1.2
 ...
 ```
-::: warning
+::: info
 * You must change the <code>jwt_secret</code> to a random string of character and numbers.
 * Set <code>default_redirection_url</code> to your preferences. The user will be redirected to this when visiting a non-existent URL.
 * If you changed the port in the docker-compose.yml file, you must update the port under **server**.

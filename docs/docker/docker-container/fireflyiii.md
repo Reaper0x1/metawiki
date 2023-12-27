@@ -41,7 +41,7 @@ services:
       - /your-db-location:/var/lib/mysql
     restart: unless-stopped
 ```
-::: warning
+::: info
 * If you want to change <code>port</code> make sure to change only the left one (<span style="color:orange"><strong>8080</strong></span>:8080).
 * Update <code>your-config-location</code> and <code>your-db-location</code> to your desired location for configuration files.
 * Change <code>MYSQL_PASSWORD</code> and <code>MYSQL_RANDOM_ROOT_PASSWORD</code> to a more secure one. 
@@ -373,7 +373,7 @@ FIREFLY_III_LAYOUT=v1
 APP_URL=http://localhost
 ```
 ::: warning
-* Change <code>TZ</code> to match your timezone..
+* Change <code>TZ</code> to match your timezone.
 * Update <code>DB_PASSWORD</code> with the same in the docker compose file. 
 :::
 

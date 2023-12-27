@@ -30,7 +30,7 @@ services:
     restart: unless-stopped
 ```
 
-::: warning
+::: info
 * If you want to change <code>port</code> make sure to change only the left one (<span style="color:orange"><strong>7878</strong></span>:7878).
 * Update <code>PUID</code> and <code>GUID</code> accordingly to your system.
 * Update <code>your-config-location</code> to your desired location for configuration files.

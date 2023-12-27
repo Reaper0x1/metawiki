@@ -32,7 +32,7 @@ services:
       - seccomp=unconfined
 ```
 
-::: warning
+::: info
 * Update <code>PUID</code> and <code>GUID</code> accordingly to your system.
 * Update <code>your-config-location</code> to your desired location for configuration files.
 * Update <code>your-tv-series-location</code> to your tv series folder location.
