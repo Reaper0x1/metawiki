@@ -14,10 +14,12 @@ The Docker listener allows the Wazuh agent to capture Docker events and forward 
     ```bash
     apt-get update && apt-get install python3
     ```
+
 2. Install Pip on Debian-based endpoints:    
     ```bash
     apt-get install python3-pip
     ```
+
 3. Install the Python <code>docker</code> module. The Wazuh Docker listener requires docker <code>4.2.0</code>.
     ```bash
     pip3 install docker==4.2.0
@@ -59,3 +61,20 @@ Perform the following steps on the Docker server to configure the Wazuh agent to
     tail -f  /var/ossec/logs/ossec.log | grep docker
     ```
 
+## Test the configuration
+Perform several Docker activities like pulling a Docker image, starting an instance, running some other Docker commands, and then deleting the container.
+1. Pull an image, such as the NGINX image, and run a container:
+    ```bash
+    sudo docker pull nginx
+    sudo docker run -d -P --name nginx_container nginx
+    sudo docker exec -it nginx_container cat /etc/passwd
+    sudo docker exec -it nginx_container /bin/bash
+    exit
+    ```
+
+2. Stop and remove the container:
+
+    ```bash
+    sudo docker stop nginx_container
+    sudo docker rm nginx_container
+    ```
