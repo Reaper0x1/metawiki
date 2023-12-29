@@ -18,7 +18,6 @@ export default defineConfig({
         text: "Info",
         link: "/info",
       },
-
       {
         text: "Proxmox",
         items: [
@@ -102,17 +101,26 @@ export default defineConfig({
           },
         ],
       },
-
-      // {
-      //   text: 'Dropdown Menu',
-      //   items: [
-      //     { text: 'Item A', link: '/item-1' },
-      //     { text: 'Item B', link: '/item-2' },
-      //     { text: 'Item C', link: '/item-3' },
-      //   ],
-      // },
-
-      // ...
+      {
+        text: "Wazuh",
+        items: [
+          { text: "Install", link: "/wazuh/install" },
+          { text: "Configuration", link: "/wazuh/configuration" },
+          {
+            text: "Agents",
+            items: [
+              {
+                text: "Linux Configuration",
+                link: "/wazuh/agent/linux-configuration",
+              },
+              {
+                text: "Docker Listener",
+                link: "/wazuh/agent/docker-listener",
+              },
+            ],
+          },
+        ],
+      },
     ],
 
     sidebar: [
@@ -222,6 +230,28 @@ export default defineConfig({
           {
             text: "Extra Configuration",
             link: "/docker/extra-configuration.md",
+          },
+        ],
+      },
+      {
+        text: "Wazuh",
+        collapsed: false,
+        items: [
+          { text: "Install", link: "/wazuh/install" },
+          { text: "Configuration", link: "/wazuh/configuration" },
+          {
+            text: "Agents",
+            collapsed: true,
+            items: [
+              {
+                text: "Linux Configuration",
+                link: "/wazuh/agent/linux-configuration",
+              },
+              {
+                text: "Docker Listener",
+                link: "/wazuh/agent/docker-listener",
+              },
+            ],
           },
         ],
       },
