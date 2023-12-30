@@ -38,7 +38,7 @@ Perform the following steps on the Docker server to configure the Wazuh agent to
     ```bash
     nano /var/ossec/etc/ossec.conf
     ```
-    ```conf
+    ```txt
     <ossec_config>
      <wodle name="docker-listener">
         <interval>10m</interval>
@@ -78,3 +78,6 @@ Perform several Docker activities like pulling a Docker image, starting an insta
     sudo docker stop nginx_container
     sudo docker rm nginx_container
     ```
+
+
+https://wazuh.com/blog/docker-container-security-monitoring-with-wazuh/
