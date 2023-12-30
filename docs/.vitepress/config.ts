@@ -93,6 +93,10 @@ export default defineConfig({
               },
               { text: "Radarr", link: "/docker/docker-container/radarr" },
               { text: "VS Code", link: "/docker/docker-container/vs-code" },
+              {
+                text: "Whats Up Docker",
+                link: "/docker/docker-container/whats-up-docker",
+              },
             ],
           },
           {
@@ -226,6 +230,10 @@ export default defineConfig({
               },
               { text: "Radarr", link: "/docker/docker-container/radarr" },
               { text: "VS Code", link: "/docker/docker-container/vs-code" },
+              {
+                text: "Whats Up Docker",
+                link: "/docker/docker-container/whats-up-docker",
+              },
             ],
           },
           {
