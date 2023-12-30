@@ -62,6 +62,7 @@ export default defineConfig({
               { text: "Authelia", link: "/docker/docker-container/authelia" },
               { text: "Authentik", link: "/docker/docker-container/authentik" },
               { text: "Deluge", link: "/docker/docker-container/deluge" },
+              { text: "Duplicacy", link: "/docker/docker-container/duplicacy" },
               { text: "Fail2Ban", link: "/docker/docker-container/fail2ban" },
               {
                 text: "FireflyIII",
@@ -190,6 +191,7 @@ export default defineConfig({
                 link: "/docker/docker-container/authentik",
               },
               { text: "Deluge", link: "/docker/docker-container/deluge" },
+              { text: "Duplicacy", link: "/docker/docker-container/duplicacy" },
               {
                 text: "Fail2Ban",
                 link: "/docker/docker-container/fail2ban",
