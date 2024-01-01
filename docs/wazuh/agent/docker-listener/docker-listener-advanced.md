@@ -314,8 +314,11 @@ Visualize the triggered alerts by visiting the Wazuh dashboard.
 
 * **Container actions alerts**: navigate to the **Discover** section and add the <code>rule.groups: docker</code> filter in the search bar to query the alerts. 
 
-    Also, use the **Filter by type** search field and apply the <code>agent.name</code>, <code>data.docker.from</code>, <code>data.docker.Actor.Attributes.name</code>, <code>data.docker.Type</code>, <code>data.docker.Action</code>, and <code>rule.description</code>, filters. Save the query as Docker Events.
-    ![An image](/img/wazuh/docker/docker-events-1.gif)
+    Also, use the **Filter by type** search field and apply the <code>agent.name</code>, <code>data.docker.from</code>, <code>data.docker.Actor.Attributes.name</code>, <code>data.docker.Type</code>, <code>data.docker.Action</code>, and <code>rule.description</code>, filters. 
+    
+    Save the query as **Docker Events**.
+    
+    ![](/img/wazuh/docker/docker-events-1.gif){data-zoomable}
 
 
 
