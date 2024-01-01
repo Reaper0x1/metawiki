@@ -318,12 +318,34 @@ Visualize the triggered alerts by visiting the Wazuh dashboard.
     
     Save the query as **Docker Events**.
     
-    ![](/img/wazuh/docker/docker-events-1.gif){data-zoomable}
+    ![](/img/wazuh/docker/docker-events.gif){data-zoomable}
 
 
+* **Container resources alerts**: Navigate to the **Discover** section and add the <code>rule.id: (100100 OR 100101 OR 100102 OR 100103)</code> filter in the search bar to query the alerts. 
+
+    Also, use the **Filter by type** search field and apply the <code>agent.name</code>, <code>data.container_name</code>, <code>data.container_cpu_usage</code>, <code>data.container_memory_usage</code>, <code>data.container_memory_limit</code>, <code>data.container_network_rx</code>, and <code>data.container_network_tx</code> filters. 
+    
+    Save the query as **Container Resources**.
+
+    ![](/img/wazuh/docker/docker-resources-alerts.png){data-zoomable}
 
 
+* **Container health alerts**: Navigate to the **Discover** section and add the <code>rule.id: (100105 OR 100106)</code> filter in the search bar to query the alerts. 
 
+    Also, use the **Filter by type** search field and apply the <code>agent.name</code>, <code>data.container_image</code>, <code>data.container_name</code>, <code>data.container_health_status</code>, and <code>data.container_uptime</code> filters to show the status information. 
+    
+    Save the query as **Container Health**.
+
+    ![](/img/wazuh/docker/docker-containers-health.png){data-zoomable}
+
+* **Container threshold events**: Navigate to the **Wazuh** > **Security events** section and add the <code>rule.id: (100101 OR 100102 OR 100103 OR 100106)</code> filter in the search bar to query the alerts.
+
+    ![](/img/wazuh/docker/docker-threshold-events.png){data-zoomable}
+
+
+To have a single display of the visualizations, create a custom dashboard with the above templates. Navigate to OpenSearch **Dashboards** > **Dashboard** > **Create New Dashboard**, then select **Add an existing** link and click the saved visualizations (Docker Events, Container Resources, and Container Health). This will add the visualizations to the new dashboard. Save the dashboard as **Container-resource-health-events**.
+
+![](/img/wazuh/docker/docker-events-dashboard.gif){data-zoomable}
 
 
 
