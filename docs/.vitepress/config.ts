@@ -120,7 +120,7 @@ export default defineConfig({
               },
               {
                 text: "Docker Listener",
-                link: "/wazuh/agent/docker-listener",
+                link: "/wazuh/agent/docker-listener/docker-listener-info",
               },
             ],
           },
@@ -260,7 +260,21 @@ export default defineConfig({
               },
               {
                 text: "Docker Listener",
-                link: "/wazuh/agent/docker-listener",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Docker Listener Info",
+                    link: "/wazuh/agent/docker-listener/docker-listener-info",
+                  },
+                  {
+                    text: "Docker Listener Simple",
+                    link: "/wazuh/agent/docker-listener/docker-listener-simple",
+                  },
+                  {
+                    text: "Docker Listener Advanced",
+                    link: "/wazuh/agent/docker-listener/docker-listener-advanced",
+                  },
+                ],
               },
             ],
           },
