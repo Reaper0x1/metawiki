@@ -1,3 +1,8 @@
+---
+prev: 'Info | Docker Listener'
+next: 'Advanced Configuration | Docker Listener'
+---
+
 # Docker Listener Simple
 
 ## Enable the Wazuh Docker listener

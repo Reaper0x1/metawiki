@@ -1,3 +1,6 @@
+---
+next: 'Simple Configuration | Docker Listener'
+---
 # Docker Listener Info
 
 To maintain the security and compliance of your Docker environment, it is crucial to proactively monitor both your Docker server and containers. The Docker server is the backbone of your container infrastructure and manages the deployment of containers and resource allocation. By monitoring the Docker server, you can keep track of resource usage, unauthorized access attempts, performance issues, and other security concerns.

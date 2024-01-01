@@ -1,3 +1,8 @@
+---
+prev: 'Simple Configuration | Docker Listener'
+next: 'Utils | Wazuh'
+---
+
 # Docker Listener Advanced
 
 ## Agent endpoint configuration
@@ -350,3 +355,4 @@ To have a single display of the visualizations, create a custom dashboard with t
 
 
 Reference guide <a href="https://wazuh.com/blog/docker-container-security-monitoring-with-wazuh/" target="_blank" rel="noreferrer">here</a>.
+
