@@ -3,7 +3,7 @@ prev: 'Simple Configuration | Docker Listener'
 next: 'Utils | Wazuh'
 ---
 
-# Docker Listener Advanced
+# Advanced Configuration
 
 ## Agent endpoint configuration
 ::: tip Note

@@ -263,15 +263,15 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                   {
-                    text: "Docker Listener Info",
+                    text: "Info",
                     link: "/wazuh/agent/docker-listener/docker-listener-info",
                   },
                   {
-                    text: "Docker Listener Simple",
+                    text: "Simple Configuration",
                     link: "/wazuh/agent/docker-listener/docker-listener-simple",
                   },
                   {
-                    text: "Docker Listener Advanced",
+                    text: "Advanced Configuration",
                     link: "/wazuh/agent/docker-listener/docker-listener-advanced",
                   },
                 ],

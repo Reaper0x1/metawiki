@@ -3,7 +3,7 @@ prev: 'Info | Docker Listener'
 next: 'Advanced Configuration | Docker Listener'
 ---
 
-# Docker Listener Simple
+# Simple Configuration
 
 ## Enable the Wazuh Docker listener
 The Docker listener allows the Wazuh agent to capture Docker events and forward them to the Wazuh server. The following sections describe how to install the Python Docker module and enable the Wazuh Docker listener.
