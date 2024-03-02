@@ -93,6 +93,10 @@ export default defineConfig({
                 link: "/docker/docker-container/qbittorrent",
               },
               { text: "Radarr", link: "/docker/docker-container/radarr" },
+              {
+                text: "Terraria Server",
+                link: "/docker/docker-container/terraria-server",
+              },
               { text: "VS Code", link: "/docker/docker-container/vs-code" },
               {
                 text: "Whats Up Docker",
@@ -231,6 +235,10 @@ export default defineConfig({
                 link: "/docker/docker-container/qbittorrent",
               },
               { text: "Radarr", link: "/docker/docker-container/radarr" },
+              {
+                text: "Terraria Server",
+                link: "/docker/docker-container/terraria-server",
+              },
               { text: "VS Code", link: "/docker/docker-container/vs-code" },
               {
                 text: "Whats Up Docker",
