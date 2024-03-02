@@ -142,6 +142,11 @@ It logs everything in a file, so make sure to change <code>log-folder</code> to 
 
 Depending on your system you may need to adjust the paths to the various binaries, for example <code>/usr/bin/docker</code>. Make sure that binaries exist. If not chage accordingly (you can use the command <code>which docker</code> to know the exact location).
 
+Make the file executable:
+```bash
+chmod +x ./restart.sh
+```
+
 ### Add cron schedule
 Now you need to add a **cron** job. Edit the crontable:
 ```bash
