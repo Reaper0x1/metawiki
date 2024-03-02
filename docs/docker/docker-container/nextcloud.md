@@ -105,7 +105,7 @@ For older versions use:
 docker-compose up -d
 ```
 
-After initialization you can open whe web interface at <code>ht<span>tp://</span>192.168.1.111:8080</code>
+After initialization you can open the web interface at <code>ht<span>tp://</span>192.168.1.111:8080</code>
 
 Create an <code>admin</code> account and complete the initial configuration.
 

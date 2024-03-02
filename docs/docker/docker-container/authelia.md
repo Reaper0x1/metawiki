@@ -194,7 +194,7 @@ Now you can restart the Authelia container.
 Any time you add a new user, you will need to restart the Authelia container to recognize the new settings/rules.
 :::
 
-After initialization you can open whe web interface at <code>ht<span>tp://</span>192.168.1.100:9091</code>.
+After initialization you can open the web interface at <code>ht<span>tp://</span>192.168.1.100:9091</code>.
 
 ## Nginx Proxy Manager Integration
 Create a <code>Proxy Host</code> for Authelia and your other services as shown [here](./nginx-proxy-manager.md#add-new-host).

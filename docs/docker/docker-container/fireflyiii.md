@@ -389,7 +389,7 @@ For older versions use:
 docker-compose up -d
 ```
 
-After initialization you can open whe web interface at <code>ht<span>tp://</span>192.168.1.200:8080</code>
+After initialization you can open the web interface at <code>ht<span>tp://</span>192.168.1.200:8080</code>
 
 ## Set Up Recurring Transactions
 Firefly III has a recurring transactions option. In order for that to work, you need to setup a cronjob. Without that, you get an error at the top of the page saying:

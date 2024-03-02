@@ -44,7 +44,7 @@ For older versions use:
 docker-compose up -d
 ```
 
-After initialization you can open whe web interface at <code>ht<span>tp://</span>192.168.1.110:9696</code>
+After initialization you can open the web interface at <code>ht<span>tp://</span>192.168.1.110:9696</code>
 
 ## Add Indexer
 To add an Indexer go to the web interface and click <code>Add Indexer</code>

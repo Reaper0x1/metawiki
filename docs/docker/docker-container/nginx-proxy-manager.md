@@ -41,7 +41,7 @@ For older versions use:
 docker-compose up -d
 ```
 
-After initialization you can open whe web interface at <code>ht<span>tp://</span>192.168.1.100:81</code>.
+After initialization you can open the web interface at <code>ht<span>tp://</span>192.168.1.100:81</code>.
 
 ::: info
 The default credentials for the login are:

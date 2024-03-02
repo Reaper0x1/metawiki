@@ -50,7 +50,7 @@ For older versions use:
 docker-compose up -d
 ```
 
-After initialization you can open whe web interface at <code>ht<span>tp://</span>192.168.1.110:7878</code>
+After initialization you can open the web interface at <code>ht<span>tp://</span>192.168.1.110:7878</code>
 
 ## qBittorrent Integration (Download Client)
 Radarr needs a download client to automatically downloads movies for you.

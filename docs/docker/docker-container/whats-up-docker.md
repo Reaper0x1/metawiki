@@ -40,7 +40,7 @@ For older versions use:
 docker-compose up -d
 ```
 
-After initialization you can open whe web interface at <code>ht<span>tp://</span>192.168.1.200:3000</code>
+After initialization you can open the web interface at <code>ht<span>tp://</span>192.168.1.200:3000</code>
 
 ## Configuration
 
