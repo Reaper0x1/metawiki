@@ -23,13 +23,25 @@ export default defineConfig({
         items: [
           { text: "Get started", link: "/proxmox/get-started" },
           { text: "Install", link: "/proxmox/installation" },
-          { text: "Configuration", link: "/proxmox/general-config" },
+          {
+            text: "Configuration",
+            items: [
+              {
+                text: "LXC Configuration",
+                link: "/proxmox/configuration/lxc-configuration",
+              },
+              {
+                text: "General Config",
+                link: "/proxmox/configuration/general-config",
+              },
+            ],
+          },
           {
             text: "External Drive",
             link: "/proxmox/external-drive-configuration",
           },
           {
-            text: "LXC Container",
+            text: "LXC Containers",
             items: [
               {
                 text: "AdGuard Home",
@@ -57,7 +69,11 @@ export default defineConfig({
         items: [
           { text: "Install Docker", link: "/docker/docker.md" },
           {
-            text: "Docker Container",
+            text: "Extra Configuration",
+            link: "/docker/extra-configuration.md",
+          },
+          {
+            text: "Docker Containers",
             items: [
               { text: "Authelia", link: "/docker/docker-container/authelia" },
               { text: "Authentik", link: "/docker/docker-container/authentik" },
@@ -104,10 +120,6 @@ export default defineConfig({
               },
             ],
           },
-          {
-            text: "Extra Configuration",
-            link: "/docker/extra-configuration.md",
-          },
         ],
       },
       {
@@ -146,14 +158,24 @@ export default defineConfig({
           { text: "Install", link: "/proxmox/installation" },
           {
             text: "Configuration",
-            link: "/proxmox/general-config",
+            collapsed: true,
+            items: [
+              {
+                text: "LXC Configuration",
+                link: "/proxmox/configuration/lxc-configuration",
+              },
+              {
+                text: "General Config",
+                link: "/proxmox/configuration/general-config",
+              },
+            ],
           },
           {
             text: "External Drive",
             link: "/proxmox/external-drive-configuration",
           },
           {
-            text: "LXC Container",
+            text: "LXC Containers",
             collapsed: true,
             items: [
               {
@@ -183,7 +205,11 @@ export default defineConfig({
         items: [
           { text: "Install Docker", link: "/docker/docker.md" },
           {
-            text: "Docker Container",
+            text: "Extra Configuration",
+            link: "/docker/extra-configuration.md",
+          },
+          {
+            text: "Docker Containers",
             collapsed: true,
             items: [
               {
@@ -245,10 +271,6 @@ export default defineConfig({
                 link: "/docker/docker-container/whats-up-docker",
               },
             ],
-          },
-          {
-            text: "Extra Configuration",
-            link: "/docker/extra-configuration.md",
           },
         ],
       },
