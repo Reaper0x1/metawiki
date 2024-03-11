@@ -1,4 +1,4 @@
-# General config
+# LXC Configuration
 
 ## Edit LXC Configuration
 From the host, edit the file:
@@ -23,7 +23,7 @@ Save the configuration and reboot the container.
 :::info
 There are two possible cases to keep in mind:
 - If the container is **privileged** you have no problem reading and writing file inside the mounted folder on the container (for example as root).
-- If the container is **unprivileged** the files are read-only. To be able to read and write new file you need to follow a different approach as described [here](#bindmount-unprivileged-lxc-container).
+- If the container is **unprivileged** the files are read-only. To be able to read and write new file you need to follow a different approach as described [below](#bindmount-unprivileged-lxc-container).
 :::
 
 ## Bindmount unprivileged LXC container
@@ -88,19 +88,35 @@ In this example the host folder <code>/mnt/storage</code> will be mounted to <co
     usermod -aG hostwrite <user>
     ```
 
-4. Set the default ACLs for the group and other:
+4. Set the default ACLs for the group and other ont he **host**:
 
     ```bash
     setfacl -Rm g:101000:rwx,d:g:101000:rwx,o::0 /mnt/storage
     ```
 
-What this does is ensure that the <code>/mnt/storage</code> folder (and subfolders) get write permissions for GID 101000 (mapped to the hostwrite group on the guest), and that the default ACL for new files and folders is also allows GID 101000 access.
+    What this does is ensure that the <code>/mnt/storage</code> folder (and subfolders) get write permissions for GID 101000 (mapped to the hostwrite group on the guest), and that the default ACL for new files and folders is also allows GID 101000 access.
+
+5. Reboot the container.
 
 Now, new files create in the container have the UID associated with the container user but they all belong to the homeusers group.
 
 :::info
 To remove recursively all acls from a folder run the following command: <code>setfacl -b -R /folder</code>
 :::
+
+### Docker
+If you are running docker inside the container, you need to run the container as the user created before:
+
+- Docker Run
+    ```yml
+    -e PUID=1000 -e PGID=1000
+    ```
+- Docker Compose
+    ```yml
+    environment:
+        - PUID=1000
+        - PGID=1000
+    ```
 
 ## Enable Tun Interface
 Edit the LXC configuration file like above.
