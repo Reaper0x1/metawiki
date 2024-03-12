@@ -83,7 +83,7 @@ In this example the host folder <code>/mnt/storage</code> will be mounted to <co
     adduser <user>
     ```
 
-    Add container users to the hostwrite group as necessary:
+    Add container users to the <code>hostwrite</code> group as necessary:
     ```bash
     usermod -aG hostwrite <user>
     ```
@@ -98,7 +98,7 @@ In this example the host folder <code>/mnt/storage</code> will be mounted to <co
 
 5. Reboot the container.
 
-Now, new files create in the container have the UID associated with the container user but they all belong to the homeusers group.
+Now, new files create in the container have the UID associated with the container user but they all belong to the <code>hostwrite</code> group.
 
 :::info
 To remove recursively all acls from a folder run the following command: <code>setfacl -b -R /folder</code>
