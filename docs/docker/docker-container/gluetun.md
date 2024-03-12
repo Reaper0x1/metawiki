@@ -82,7 +82,7 @@ services:
 For other providers, see the <a href="https://github.com/qdm12/gluetun-wiki" target="_blank" rel="noreferrer">official wiki</a>.
 
 ::: info
-If the Docker container is inside a <code>LXC Container</code> you need to enable the <code>tun</code> interface as shown in [this guide](../../proxmox/general-config.md#enable-tun-interface).
+If the Docker container is inside a <code>LXC Container</code> you need to enable the <code>tun</code> interface as shown in [this guide](../../proxmox/configuration/lxc-configuration.md#enable-tun-interface).
 :::
 
 ## Run the container
