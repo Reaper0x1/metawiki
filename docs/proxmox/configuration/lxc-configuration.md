@@ -80,7 +80,7 @@ In this example the host folder <code>/mnt/storage</code> will be mounted to <co
 
     If not present, on the container create a user that need access to the files:
     ```bash
-    adduser <user>
+    useradd -u 1000 -g 1000 hostwrite
     ```
 
     Add container users to the <code>hostwrite</code> group as necessary:
