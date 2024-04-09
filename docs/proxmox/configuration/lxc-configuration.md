@@ -128,7 +128,7 @@ lxc.cgroup2.devices.allow: c 10:200 rwm
 lxc.mount.entry: /dev/net dev/net none bind,create=dir
 ```
 
-<Badge type="tip" text="uprivileged container" />
+<Badge type="tip" text="unprivileged container" />
 
 ```txt
 lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
