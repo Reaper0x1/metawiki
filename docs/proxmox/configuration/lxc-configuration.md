@@ -120,13 +120,21 @@ If you are running docker inside the container, you need to run the container as
 
 ## Enable Tun Interface
 Edit the LXC configuration file like above.
-Add those lines:
+Add:
+<Badge type="tip" text="privileged container" />
+
 ```txt
 lxc.cgroup2.devices.allow: c 10:200 rwm
 lxc.mount.entry: /dev/net dev/net none bind,create=dir
 ```
+
+<Badge type="tip" text="uprivileged container" />
+
+```txt
+lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
+```
+
 Now start/restart the container.
 
-This guide assumes that the container is privileged.
 
 Full guide <a href="https://pve.proxmox.com/wiki/OpenVPN_in_LXC" target="_blank" rel="noreferrer">here</a>.
