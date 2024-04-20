@@ -30,10 +30,6 @@ export default defineConfig({
                 text: "LXC Configuration",
                 link: "/proxmox/configuration/lxc-configuration",
               },
-              {
-                text: "General Config",
-                link: "/proxmox/configuration/general-config",
-              },
             ],
           },
           {
@@ -163,10 +159,6 @@ export default defineConfig({
               {
                 text: "LXC Configuration",
                 link: "/proxmox/configuration/lxc-configuration",
-              },
-              {
-                text: "General Config",
-                link: "/proxmox/configuration/general-config",
               },
             ],
           },
