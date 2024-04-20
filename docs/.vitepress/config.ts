@@ -86,6 +86,7 @@ export default defineConfig({
                 link: "/docker/docker-container/homepage",
               },
               { text: "Komga", link: "/docker/docker-container/komga" },
+              { text: "Mylar3", link: "/docker/docker-container/mylar3.md" },
               { text: "Netdata", link: "/docker/docker-container/netdata" },
               { text: "Nextcloud", link: "/docker/docker-container/nextcloud" },
               {
@@ -233,6 +234,7 @@ export default defineConfig({
                 link: "/docker/docker-container/homepage",
               },
               { text: "Komga", link: "/docker/docker-container/komga" },
+              { text: "Mylar3", link: "/docker/docker-container/mylar3" },
               { text: "Netdata", link: "/docker/docker-container/netdata" },
               {
                 text: "Nextcloud",
