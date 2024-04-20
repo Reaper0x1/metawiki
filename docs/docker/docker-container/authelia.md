@@ -133,7 +133,7 @@ notifier:
   disable_startup_check: true #true/false
   smtp:
     username: youremail@gmail.com #your email address
-    password: Y0uRp@55W0rD! #your email password
+    password: password #your email password
     host: smtp.gmail.com #email smtp server
     port: 587 #email smtp port
     sender: youremail@gmail.com

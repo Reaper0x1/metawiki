@@ -4,62 +4,62 @@ This guide provide you with the info necessary for installing Docker and Docker 
 
 ## Add Docker repository
 
-Run the commands below as root:
+1. Run the commands below as root:
 
-```bash
-apt-get update
-```
+    ```bash
+    apt-get update
+    ```
 
-```bash
-apt-get install ca-certificates curl gnupg
-```
+    ```bash
+    apt-get install ca-certificates curl gnupg
+    ```
 
-```bash
-install -m 0755 -d /etc/apt/keyrings
-```
-<br/>
+    ```bash
+    install -m 0755 -d /etc/apt/keyrings
+    ```
 
-For Debian:
-```bash
-curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-```
+2. Download Docker key:  
 
-For Ubuntu:
-```bash
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-```
+    **Debian**:
+    ```bash
+    curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    ```
 
-<br/>
+    **Ubuntu**:
+    ```bash
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    ```
 
-```bash
-chmod a+r /etc/apt/keyrings/docker.gpg
-```
 
-<br/>
+3. Change permission of docker key:
+    ```bash
+    chmod a+r /etc/apt/keyrings/docker.gpg
+    ```  
 
-For Debian:
+4. Add Docker repository:
 
-```bash
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  tee /etc/apt/sources.list.d/docker.list > /dev/null
-```
+    **Debian**:
 
-For Ubuntu:
-```bash
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  tee /etc/apt/sources.list.d/docker.list > /dev/null
-```
+    ```bash
+    echo \
+      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+      $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+      tee /etc/apt/sources.list.d/docker.list > /dev/null
+    ```
 
-<br/>
+    **Ubuntu**:
+    ```bash
+    echo \
+      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+      $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+      tee /etc/apt/sources.list.d/docker.list > /dev/null
+    ```
 
-Now refresh the repository:
-```bash
-apt-get update
-```
+
+5. Now refresh the repository:
+    ```bash
+    apt-get update
+    ```
 
 ## Install Docker and Docker Compose
 Run the following command as root:

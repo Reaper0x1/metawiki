@@ -21,7 +21,7 @@ The default credentials for the login are:
 - Password: <code>changeme</code>
 :::
 
-## Create new SSL Certificate
+## Create new SSL Certificate (Cloudflare)
 ::: warning
 You must forward port <code>80</code> and <code>443</code> on your router before proceeding.
 :::
