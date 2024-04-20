@@ -100,6 +100,10 @@ export default defineConfig({
                 text: "Plex Media Server",
                 link: "/docker/docker-container/plex-media-server",
               },
+              {
+                text: "Projectsend",
+                link: "/docker/docker-container/projectsend",
+              },
               { text: "Prowlarr", link: "/docker/docker-container/prowlarr" },
               {
                 text: "qBittorrent",
@@ -245,6 +249,10 @@ export default defineConfig({
               {
                 text: "Plex Media Server",
                 link: "/docker/docker-container/plex-media-server",
+              },
+              {
+                text: "Projectsend",
+                link: "/docker/docker-container/projectsend",
               },
               {
                 text: "Prowlarr",
