@@ -85,6 +85,7 @@ export default defineConfig({
                 text: "Homepage",
                 link: "/docker/docker-container/homepage",
               },
+              { text: "Komga", link: "/docker/docker-container/komga" },
               { text: "Netdata", link: "/docker/docker-container/netdata" },
               { text: "Nextcloud", link: "/docker/docker-container/nextcloud" },
               {
@@ -227,6 +228,7 @@ export default defineConfig({
                 text: "Homepage",
                 link: "/docker/docker-container/homepage",
               },
+              { text: "Komga", link: "/docker/docker-container/komga" },
               { text: "Netdata", link: "/docker/docker-container/netdata" },
               {
                 text: "Nextcloud",
