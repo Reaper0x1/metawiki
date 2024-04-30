@@ -101,7 +101,8 @@ In this example the host folder <code>/mnt/storage</code> will be mounted to <co
 Now, new files create in the container have the UID associated with the container user but they all belong to the <code>hostwrite</code> group.
 
 :::info
-To remove recursively all acls from a folder run the following command: <code>setfacl -b -R /folder</code>
+- To view all acls from a folder run the following command: <code>getfacl /folder</code>
+- To remove recursively all acls from a folder run the following command: <code>setfacl -b -R /folder</code>
 :::
 
 ### Docker
