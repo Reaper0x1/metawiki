@@ -1,7 +1,7 @@
 # phpMyAdmin <img src="/phpmyadmin-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
 
 
-phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web
+phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web.
 
 ::: info
 The guide refers to the domain <code>example.com</code> and the local IP <code>192.168.1.400</code>, be sure to change them according to your configuration.

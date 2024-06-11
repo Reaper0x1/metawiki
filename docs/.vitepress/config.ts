@@ -43,6 +43,7 @@ export default defineConfig({
   lastUpdated: true,
   appearance: "dark",
 
+
   themeConfig: {
     search: {
       provider: "local",

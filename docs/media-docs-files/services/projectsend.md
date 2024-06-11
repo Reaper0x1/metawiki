@@ -1,4 +1,4 @@
-# Projectsend <img src="/projectsend-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# ProjectSend <img src="/projectsend-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
 
 
 ProjectSend is an open source, clients-oriented, private file sharing web application.

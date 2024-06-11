@@ -1,7 +1,7 @@
 # Deluge <img src="/deluge-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
 
 
-Deluge is a lightweight, Free Software, cross-platform BitTorrent client. Full Encryption; WebUI; Plugin System; Much more...
+Deluge is a lightweight, Free Software, cross-platform BitTorrent client. Full Encryption, WebUI, plugin system and much more.
 
 ::: info
 The guide refers to the domain <code>example.com</code> and the local IP <code>192.168.1.100</code>, be sure to change them according to your configuration.
