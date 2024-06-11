@@ -30,8 +30,8 @@ var dashServPath = `${dashPath}/services`
 var gamingPath = "gaming"
 var gamingServPath = `${gamingPath}/services`
 
-var otherPath = "other"
-var otherServPath = `${otherPath}/services`
+var miscPath = "miscellaneous"
+var miscServPath = `${miscPath}/services`
 
 
 // refer https://vitepress.dev/reference/site-config for details
@@ -116,8 +116,8 @@ export default defineConfig({
             link: `/${gamingPath}/info`,
           },
           {
-            text: "🗂️ Other",
-            link: `/${otherPath}/info`,
+            text: "🔮 Miscellaneous",
+            link: `/${miscPath}/info`,
           },
         ],
       },
@@ -405,12 +405,12 @@ export default defineConfig({
         ]
       },
       {
-        text: "🗂️ Other",
+        text: "🔮 Miscellaneous",
         collapsed: true,
         items: [
           {
             text: "Info",
-            link: `/${otherPath}/info`,
+            link: `/${miscPath}/info`,
           },
           {
             text: "Services",
@@ -418,7 +418,7 @@ export default defineConfig({
             items: [
               {
                 text: "mylar3",
-                link: `/${otherServPath}/mylar3`,
+                link: `/${miscServPath}/mylar3`,
               },
             ]
           }

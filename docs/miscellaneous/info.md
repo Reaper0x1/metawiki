@@ -1,4 +1,4 @@
-# 🗂️ Other
+# 🔮 Miscellaneous
 
 Other general purpose services.
 
