@@ -1,5 +1,39 @@
 import { defineConfig } from "vitepress";
 
+var dockerPath = "docker"
+
+var proxmoxPath = "proxmox"
+
+var securityPath = "security"
+var securityServPath = `${securityPath}/services`
+var wazuhPath = `${securityServPath}/wazuh`
+var wazuhListenerPath = `${wazuhPath}/docker-listener`
+
+var autoPath = "automation"
+var mediaServPath = `${autoPath}/services`
+
+var mediaPath = "media-docs-files"
+var mediaServPath = `${mediaPath}/services`
+
+var personalPath = "personal"
+var personalServPath = `${personalPath}/services`
+
+var monitoringPath = "monitoring"
+var monitoringServPath = `${monitoringPath}/services`
+
+var devPath = "development"
+var devServPath = `${devPath}/services`
+
+var dashPath = "dashboard"
+var dashServPath = `${dashPath}/services`
+
+var gamingPath = "gaming"
+var gamingServPath = `${gamingPath}/services`
+
+var otherPath = "other"
+var otherServPath = `${otherPath}/services`
+
+
 // refer https://vitepress.dev/reference/site-config for details
 export default defineConfig({
   lang: "en-US",
@@ -19,130 +53,71 @@ export default defineConfig({
         link: "/info",
       },
       {
-        text: "Proxmox",
+        text: "⚡ Proxmox",
         items: [
-          { text: "Get started", link: "/proxmox/get-started" },
-          { text: "Install", link: "/proxmox/installation" },
           {
-            text: "Configuration",
-            items: [
-              {
-                text: "LXC Configuration",
-                link: "/proxmox/configuration/lxc-configuration",
-              },
-            ],
+            text: "LXC Configuration",
+            link: `/${proxmoxPath}/lxc-configuration`,
           },
           {
             text: "External Drive",
-            link: "/proxmox/external-drive-configuration",
+            link: `/${proxmoxPath}/external-drive`,
           },
           {
-            text: "LXC Containers",
-            items: [
-              {
-                text: "AdGuard Home",
-                link: "/proxmox/lxc-container/adguardhome",
-              },
-              {
-                text: "MariaDB",
-                link: "/proxmox/lxc-container/mariadb",
-              },
-              {
-                text: "Nginx Proxy Manager",
-                link: "/proxmox/lxc-container/nginx-proxy-manager",
-              },
-              {
-                text: "Wireguard",
-                link: "/proxmox/lxc-container/wireguard",
-              },
-            ],
+            text: "Notes",
+            link: `/${proxmoxPath}/notes`,
           },
-          { text: "Notes", link: "/proxmox/notes" },
-        ],
+        ]
       },
       {
-        text: "Docker",
+        text: "🐋 Docker",
         items: [
-          { text: "Install Docker", link: "/docker/docker.md" },
+          { text: "Install Docker", link: `/${dockerPath}/install` },
           {
             text: "Extra Configuration",
-            link: "/docker/extra-configuration.md",
-          },
-          {
-            text: "Docker Containers",
-            items: [
-              { text: "Authelia", link: "/docker/docker-container/authelia" },
-              { text: "Authentik", link: "/docker/docker-container/authentik" },
-              { text: "Deluge", link: "/docker/docker-container/deluge" },
-              { text: "Duplicacy", link: "/docker/docker-container/duplicacy" },
-              { text: "Fail2Ban", link: "/docker/docker-container/fail2ban" },
-              {
-                text: "FireflyIII",
-                link: "/docker/docker-container/fireflyiii",
-              },
-              { text: "Gluetun", link: "/docker/docker-container/gluetun" },
-              {
-                text: "Homepage",
-                link: "/docker/docker-container/homepage",
-              },
-              { text: "Komga", link: "/docker/docker-container/komga" },
-              { text: "Mylar3", link: "/docker/docker-container/mylar3.md" },
-              { text: "Netdata", link: "/docker/docker-container/netdata" },
-              { text: "Nextcloud", link: "/docker/docker-container/nextcloud" },
-              {
-                text: "Nginx Proxy Manager",
-                link: "/docker/docker-container/nginx-proxy-manager",
-              },
-              {
-                text: "phpMyAdmin",
-                link: "/docker/docker-container/phpmyadmin",
-              },
-              {
-                text: "Plex Media Server",
-                link: "/docker/docker-container/plex-media-server",
-              },
-              {
-                text: "Projectsend",
-                link: "/docker/docker-container/projectsend",
-              },
-              { text: "Prowlarr", link: "/docker/docker-container/prowlarr" },
-              {
-                text: "qBittorrent",
-                link: "/docker/docker-container/qbittorrent",
-              },
-              { text: "Radarr", link: "/docker/docker-container/radarr" },
-              {
-                text: "Terraria Server",
-                link: "/docker/docker-container/terraria-server",
-              },
-              { text: "VS Code", link: "/docker/docker-container/vs-code" },
-              {
-                text: "Whats Up Docker",
-                link: "/docker/docker-container/whats-up-docker",
-              },
-            ],
+            link: `/${dockerPath}/extra-configuration`,
           },
         ],
       },
       {
-        text: "Wazuh",
+        text: "🏷️ Categories",
         items: [
-          { text: "Install", link: "/wazuh/install" },
-          { text: "Configuration", link: "/wazuh/configuration" },
           {
-            text: "Agents",
-            items: [
-              {
-                text: "Linux Configuration",
-                link: "/wazuh/agent/linux-configuration",
-              },
-              {
-                text: "Docker Listener",
-                link: "/wazuh/agent/docker-listener/docker-listener-info",
-              },
-            ],
+            text: "🤖 Automation",
+            link: `/${autoPath}/info`,
           },
-          { text: "Utils", link: "/wazuh/utils" },
+          {
+            text: "🛡️ Security",
+            link: `/${securityPath}/info`,
+          },
+          {
+            text: "🎥 Media - Docs - Files",
+            link: `/${mediaPath}/info`,
+          },
+          {
+            text: "👨‍💻 Personal",
+            link: `/${personalPath}/info`,
+          },
+          {
+            text: "📊 Monitoring",
+            link: `/${monitoringPath}/info`,
+          },
+          {
+            text: "🚀 Development",
+            link: `/${devPath}/info`,
+          },
+          {
+            text: "🔎 Dashboard",
+            link: `/${dashPath}/info`,
+          },
+          {
+            text: "🎮 Gaming",
+            link: `/${gamingPath}/info`,
+          },
+          {
+            text: "🗂️ Other",
+            link: `/${otherPath}/info`,
+          },
         ],
       },
     ],
@@ -153,167 +128,300 @@ export default defineConfig({
         link: "/info",
       },
       {
-        text: "Proxmox",
-        collapsed: false,
+        text: "⚡ Proxmox",
+        collapsed: true,
         items: [
-          { text: "Get started", link: "/proxmox/get-started" },
-          { text: "Install", link: "/proxmox/installation" },
           {
-            text: "Configuration",
-            collapsed: true,
-            items: [
-              {
-                text: "LXC Configuration",
-                link: "/proxmox/configuration/lxc-configuration",
-              },
-            ],
+            text: "LXC Configuration",
+            link: `/${proxmoxPath}/lxc-configuration`,
           },
           {
             text: "External Drive",
-            link: "/proxmox/external-drive-configuration",
+            link: `/${proxmoxPath}/external-drive`,
           },
           {
-            text: "LXC Containers",
+            text: "Notes",
+            link: `/${proxmoxPath}/notes`,
+          },
+        ]
+      },
+      {
+        text: "🐋 Docker",
+        collapsed: true,
+        items: [
+          { text: "Install Docker", link: `/${dockerPath}/install` },
+          {
+            text: "Extra Configuration",
+            link: `/${dockerPath}/extra-configuration`,
+          },
+        ],
+      },
+      {
+        text: "🤖 Automation",
+        collapsed: true,
+        items: []
+      },
+      {
+        text: "🛡️ Security",
+        collapsed: true,
+        items: [
+          {
+            text: "Info",
+            link: `/${securityPath}/info`,
+          },
+          {
+            text: "Services",
             collapsed: true,
             items: [
               {
                 text: "AdGuard Home",
-                link: "/proxmox/lxc-container/adguardhome",
+                link: `/${securityServPath}/adguardhome`,
               },
-              {
-                text: "MariaDB",
-                link: "/proxmox/lxc-container/mariadb",
-              },
-              {
-                text: "Nginx Proxy Manager",
-                link: "/proxmox/lxc-container/nginx-proxy-manager",
-              },
-              {
-                text: "Wireguard",
-                link: "/proxmox/lxc-container/wireguard",
-              },
-            ],
-          },
-          { text: "Notes", link: "/proxmox/notes" },
-        ],
-      },
-      {
-        text: "Docker",
-        collapsed: false,
-        items: [
-          { text: "Install Docker", link: "/docker/docker.md" },
-          {
-            text: "Extra Configuration",
-            link: "/docker/extra-configuration.md",
-          },
-          {
-            text: "Docker Containers",
-            collapsed: true,
-            items: [
               {
                 text: "Authelia",
-                link: "/docker/docker-container/authelia",
+                link: `/${securityServPath}/authelia`,
               },
               {
                 text: "Authentik",
-                link: "/docker/docker-container/authentik",
-              },
-              { text: "Deluge", link: "/docker/docker-container/deluge" },
-              { text: "Duplicacy", link: "/docker/docker-container/duplicacy" },
-              {
-                text: "Fail2Ban",
-                link: "/docker/docker-container/fail2ban",
+                link: `/${securityServPath}/authentik`,
               },
               {
-                text: "FireflyIII",
-                link: "/docker/docker-container/fireflyiii",
+                text: "Fail2ban",
+                link: `/${securityServPath}/fail2ban`,
               },
-              { text: "Gluetun", link: "/docker/docker-container/gluetun" },
               {
-                text: "Homepage",
-                link: "/docker/docker-container/homepage",
-              },
-              { text: "Komga", link: "/docker/docker-container/komga" },
-              { text: "Mylar3", link: "/docker/docker-container/mylar3" },
-              { text: "Netdata", link: "/docker/docker-container/netdata" },
-              {
-                text: "Nextcloud",
-                link: "/docker/docker-container/nextcloud",
+                text: "Gluetun",
+                link: `/${securityServPath}/gluetun`,
               },
               {
                 text: "Nginx Proxy Manager",
-                link: "/docker/docker-container/nginx-proxy-manager",
+                link: `/${securityServPath}/nginx-proxy-manager`,
               },
               {
-                text: "phpMyAdmin",
-                link: "/docker/docker-container/phpmyadmin",
-              },
-              {
-                text: "Plex Media Server",
-                link: "/docker/docker-container/plex-media-server",
-              },
-              {
-                text: "Projectsend",
-                link: "/docker/docker-container/projectsend",
-              },
-              {
-                text: "Prowlarr",
-                link: "/docker/docker-container/prowlarr",
-              },
-              {
-                text: "qBittorrent",
-                link: "/docker/docker-container/qbittorrent",
-              },
-              { text: "Radarr", link: "/docker/docker-container/radarr" },
-              {
-                text: "Terraria Server",
-                link: "/docker/docker-container/terraria-server",
-              },
-              { text: "VS Code", link: "/docker/docker-container/vs-code" },
-              {
-                text: "Whats Up Docker",
-                link: "/docker/docker-container/whats-up-docker",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        text: "Wazuh",
-        collapsed: false,
-        items: [
-          { text: "Install", link: "/wazuh/install" },
-          { text: "Configuration", link: "/wazuh/configuration" },
-          {
-            text: "Agents",
-            collapsed: true,
-            items: [
-              {
-                text: "Linux Configuration",
-                link: "/wazuh/agent/linux-configuration",
-              },
-              {
-                text: "Docker Listener",
+                text: "Wazuh",
                 collapsed: true,
                 items: [
                   {
-                    text: "Info",
-                    link: "/wazuh/agent/docker-listener/docker-listener-info",
+                    text: "Install",
+                    link: `/${wazuhPath}/install`,
                   },
                   {
-                    text: "Simple Configuration",
-                    link: "/wazuh/agent/docker-listener/docker-listener-simple",
+                    text: "Docker Listener",
+                    collapsed: true,
+                    items: [
+                      {
+                        text: "Info",
+                        link: `/${wazuhListenerPath}/info`,
+                      },
+                      {
+                        text: "Simple Configuration",
+                        link: `/${wazuhListenerPath}/simple`,
+                      },
+                      {
+                        text: "Advanced Configuration",
+                        link: `/${wazuhListenerPath}/advanced`,
+                      },
+                    ]
                   },
                   {
-                    text: "Advanced Configuration",
-                    link: "/wazuh/agent/docker-listener/docker-listener-advanced",
+                    text: "Utils",
+                    link: `/${wazuhPath}/utils`,
                   },
-                ],
+                ]
+              },
+              {
+                text: "Wireguard",
+                link: `/${securityServPath}/wireguard`,
               },
             ],
           },
-          { text: "Utils", link: "/wazuh/utils" },
-        ],
+
+        ]
+      },
+      {
+        text: "🎥 Media - Docs - Files",
+        collapsed: true,
+        items: [
+          {
+            text: "Info",
+            link: `/${mediaPath}/info`,
+          },
+          {
+            text: "Services",
+            collapsed: true,
+            items: [
+              {
+                text: "Deluge",
+                link: `/${mediaServPath}/deluge`,
+              },
+              {
+                text: "Duplicacy",
+                link: `/${mediaServPath}/duplicacy`,
+              },
+              {
+                text: "Komga",
+                link: `/${mediaServPath}/komga`,
+              },
+              {
+                text: "Nextcloud",
+                link: `/${mediaServPath}/nextcloud`,
+              },
+              {
+                text: "Plex Media Server",
+                link: `/${mediaServPath}/plex-media-server`,
+              },
+              {
+                text: "Projectsend",
+                link: `/${mediaServPath}/projectsend`,
+              },
+              {
+                text: "Prowlarr",
+                link: `/${mediaServPath}/prowlarr`,
+              },
+              {
+                text: "qBittorrent",
+                link: `/${mediaServPath}/qbittorrent`,
+              },
+              {
+                text: "Radarr",
+                link: `/${mediaServPath}/radarr`,
+              },
+            ],
+          },
+
+        ]
+      },
+      {
+        text: "👨‍💻 Personal",
+        collapsed: true,
+        items: [
+          {
+            text: "Info",
+            link: `/${personalPath}/info`,
+          },
+          {
+            text: "Services",
+            collapsed: true,
+            items: [
+              {
+                text: "Firefly III",
+                link: `/${personalServPath}/fireflyiii`,
+              },
+            ]
+          }
+        ]
+      },
+      {
+        text: "📊 Monitoring",
+        collapsed: true,
+        items: [
+          {
+            text: "Info",
+            link: `/${monitoringPath}/info`,
+          },
+          {
+            text: "Services",
+            collapsed: true,
+            items: [
+              {
+                text: "Netdata",
+                link: `/${monitoringServPath}/netdata`,
+              },
+              {
+                text: "Whats Up Docker",
+                link: `/${monitoringServPath}/whats-up-docker`,
+              },
+            ]
+          }
+        ]
+      },
+      {
+        text: "🚀 Development",
+        collapsed: true,
+        items: [
+          {
+            text: "Info",
+            link: `/${devPath}/info`,
+          },
+          {
+            text: "Services",
+            collapsed: true,
+            items: [
+              {
+                text: "MariaDB",
+                link: `/${devServPath}/mariadb`,
+              },
+              {
+                text: "phpMyAdmin",
+                link: `/${devServPath}/phpmyadmin`,
+              },
+              {
+                text: "VS Code Server",
+                link: `/${devServPath}/vs-code`,
+              },
+            ]
+          }
+        ]
+      },
+      {
+        text: "🔎 Dashboard",
+        collapsed: true,
+        items: [
+          {
+            text: "Info",
+            link: `/${dashPath}/info`,
+          },
+          {
+            text: "Services",
+            collapsed: true,
+            items: [
+              {
+                text: "Homepage",
+                link: `/${dashServPath}/homepage`,
+              },
+            ]
+          }
+        ]
+      },
+      {
+        text: "🎮 Gaming",
+        collapsed: true,
+        items: [
+          {
+            text: "Info",
+            link: `/${gamingPath}/info`,
+          },
+          {
+            text: "Services",
+            collapsed: true,
+            items: [
+              {
+                text: "Terraria Server",
+                link: `/${gamingServPath}/terraria-server`,
+              },
+            ]
+          }
+        ]
+      },
+      {
+        text: "🗂️ Other",
+        collapsed: true,
+        items: [
+          {
+            text: "Info",
+            link: `/${otherPath}/info`,
+          },
+          {
+            text: "Services",
+            collapsed: true,
+            items: [
+              {
+                text: "mylar3",
+                link: `/${otherServPath}/mylar3`,
+              },
+            ]
+          }
+        ]
       },
     ],
   },

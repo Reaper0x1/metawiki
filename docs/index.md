@@ -20,7 +20,7 @@ features:
   - icon: 🐋
     title: Docker and LXC Containers
     details: Fast and light like a feather.
-  - icon: 🔥
+  - icon: 🛡️
     title: Defense
     details: Security all around.
   - icon: ✨
