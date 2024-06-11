@@ -152,112 +152,112 @@ Go to authentik web interface using <code>ht<span>tps://</span>192.168.1.100:944
 Add authentik to Nginx Proxy Manager referring to [this guide](./nginx-proxy-manager#add-new-host).
 
 ## Create Provider
-Select <strong>Providers</strong> under <strong>Application</strong> tab on left hand side. Create new <strong>Proxy Provider</strong>:
-* Name: <code>Your apps name</code>
-* Authentication flow: <code>default-authentication-flow</code> 
-* Authorization flow: <code>Authorize Application IMPLICIT content</code>
-* Type: <code>Forward auth (single application)</code>
-* External Host: your app address <code>ht<span>tps://</span>app.example.com/</code>
+1. Select <strong>Providers</strong> under <strong>Application</strong> tab on left hand side. Create new <strong>Proxy Provider</strong>:
+    * Name: <code>Your apps name</code>
+    * Authentication flow: <code>default-authentication-flow</code> 
+    * Authorization flow: <code>Authorize Application IMPLICIT content</code>
+    * Type: <code>Forward auth (single application)</code>
+    * External Host: your app address <code>ht<span>tps://</span>app.example.com/</code>
 
-Click Finish.
+2. Click Finish.
 
 ## Create Application
-Select <strong>Applications</strong> from left side and create new application.
+1. Select <strong>Applications</strong> from left side and create new application.
 
-Choose a name for you application (app).
+2. Choose a name for you application (app).
 
-::: warning
-Make sure you select the provider previously created.
-:::
+    ::: warning
+    Make sure you select the provider previously created.
+    :::
 
-Click Create.
+3. Click Create.
 
 ## Modify Outpost
-Select <strong>Outpost</strong> from the left menu and select the edit button.
+1. Select <strong>Outpost</strong> from the left menu and select the edit button.
 
-Select you application under <strong>Application</strong> tab. if you have multiple applications, you need to hold your control button and select all. Otherwise redirection wont work. 
+2. Select you application under <strong>Application</strong> tab. if you have multiple applications, you need to hold your control button and select all. Otherwise redirection wont work. 
 
-Make sure the configuration on the bottom to set <code>authentik_host</code> to match your external domain (if configured).
-```yaml
-authentik_host: https://auth.example.com
-```
+3. Make sure the configuration on the bottom to set <code>authentik_host</code> to match your external domain (if configured).
+    ```yaml
+    authentik_host: https://auth.example.com
+    ```
 
-Once done update.
+4. Once done update.
 
 ## Add Proxy Pass in Nginx Proxy Manager
-Login to the NPM server, edit the application proxy entry and select <strong>Advanced</strong> tab.
+1. Login to the NPM server, edit the application proxy entry and select <strong>Advanced</strong> tab.
 
-Paste the code below:
-```text
-# Increase buffer size for large headers
-# This is needed only if you get 'upstream sent too big header while reading response
-# header from upstream' error when trying to access an application protected by goauthentik
-proxy_buffers 8 16k;
-proxy_buffer_size 32k;
+2. Paste the code below:
+    ```text
+    # Increase buffer size for large headers
+    # This is needed only if you get 'upstream sent too big header while reading response
+    # header from upstream' error when trying to access an application protected by goauthentik
+    proxy_buffers 8 16k;
+    proxy_buffer_size 32k;
 
-# Make sure not to redirect traffic to a port 4443
-port_in_redirect off;
+    # Make sure not to redirect traffic to a port 4443
+    port_in_redirect off;
 
-location / {
-    # Put your proxy_pass to your application here
-    proxy_pass          $forward_scheme://$server:$port;
-    # Set any other headers your application might need
-    # proxy_set_header Host $host;
-    # proxy_set_header ...
+    location / {
+        # Put your proxy_pass to your application here
+        proxy_pass          $forward_scheme://$server:$port;
+        # Set any other headers your application might need
+        # proxy_set_header Host $host;
+        # proxy_set_header ...
 
-    ##############################
-    # authentik-specific config
-    ##############################
-    auth_request     /outpost.goauthentik.io/auth/nginx;
-    error_page       401 = @goauthentik_proxy_signin;
-    auth_request_set $auth_cookie $upstream_http_set_cookie;
-    add_header       Set-Cookie $auth_cookie;
+        ##############################
+        # authentik-specific config
+        ##############################
+        auth_request     /outpost.goauthentik.io/auth/nginx;
+        error_page       401 = @goauthentik_proxy_signin;
+        auth_request_set $auth_cookie $upstream_http_set_cookie;
+        add_header       Set-Cookie $auth_cookie;
 
-    # translate headers from the outposts back to the actual upstream
-    auth_request_set $authentik_username $upstream_http_x_authentik_username;
-    auth_request_set $authentik_groups $upstream_http_x_authentik_groups;
-    auth_request_set $authentik_email $upstream_http_x_authentik_email;
-    auth_request_set $authentik_name $upstream_http_x_authentik_name;
-    auth_request_set $authentik_uid $upstream_http_x_authentik_uid;
+        # translate headers from the outposts back to the actual upstream
+        auth_request_set $authentik_username $upstream_http_x_authentik_username;
+        auth_request_set $authentik_groups $upstream_http_x_authentik_groups;
+        auth_request_set $authentik_email $upstream_http_x_authentik_email;
+        auth_request_set $authentik_name $upstream_http_x_authentik_name;
+        auth_request_set $authentik_uid $upstream_http_x_authentik_uid;
 
-    proxy_set_header X-authentik-username $authentik_username;
-    proxy_set_header X-authentik-groups $authentik_groups;
-    proxy_set_header X-authentik-email $authentik_email;
-    proxy_set_header X-authentik-name $authentik_name;
-    proxy_set_header X-authentik-uid $authentik_uid;
-}
+        proxy_set_header X-authentik-username $authentik_username;
+        proxy_set_header X-authentik-groups $authentik_groups;
+        proxy_set_header X-authentik-email $authentik_email;
+        proxy_set_header X-authentik-name $authentik_name;
+        proxy_set_header X-authentik-uid $authentik_uid;
+    }
 
-# all requests to /outpost.goauthentik.io must be accessible without authentication
-location /outpost.goauthentik.io {
-    proxy_pass              https://192.168.1.100:9443/outpost.goauthentik.io;
-    # ensure the host of this vserver matches your external URL you've configured
-    # in authentik
-    proxy_set_header        Host $host;
-    proxy_set_header        X-Original-URL $scheme://$http_host$request_uri;
-    add_header              Set-Cookie $auth_cookie;
-    auth_request_set        $auth_cookie $upstream_http_set_cookie;
-    proxy_pass_request_body off;
-    proxy_set_header        Content-Length "";
-}
+    # all requests to /outpost.goauthentik.io must be accessible without authentication
+    location /outpost.goauthentik.io {
+        proxy_pass              https://192.168.1.100:9443/outpost.goauthentik.io;
+        # ensure the host of this vserver matches your external URL you've configured
+        # in authentik
+        proxy_set_header        Host $host;
+        proxy_set_header        X-Original-URL $scheme://$http_host$request_uri;
+        add_header              Set-Cookie $auth_cookie;
+        auth_request_set        $auth_cookie $upstream_http_set_cookie;
+        proxy_pass_request_body off;
+        proxy_set_header        Content-Length "";
+    }
 
-# Special location for when the /auth endpoint returns a 401,
-# redirect to the /start URL which initiates SSO
-location @goauthentik_proxy_signin {
-    internal;
-    add_header Set-Cookie $auth_cookie;
-    return 302 /outpost.goauthentik.io/start?rd=$request_uri;
-    # For domain level, use the below error_page to redirect to your authentik server with the full redirect path
-    # return 302 https://authentik.company/outpost.goauthentik.io/start?rd=$scheme://$http_host$request_uri;
-}
-```
+    # Special location for when the /auth endpoint returns a 401,
+    # redirect to the /start URL which initiates SSO
+    location @goauthentik_proxy_signin {
+        internal;
+        add_header Set-Cookie $auth_cookie;
+        return 302 /outpost.goauthentik.io/start?rd=$request_uri;
+        # For domain level, use the below error_page to redirect to your authentik server with the full redirect path
+        # return 302 https://authentik.company/outpost.goauthentik.io/start?rd=$scheme://$http_host$request_uri;
+    }
+    ```
 
-::: warning
-Make sure you have changed the authentik proxy pass config. Either you can use internal IP address with port number or public address:
-* proxy_pass <code>ht<span>tps://</span>auth.example.com/outpost.goauthentik.io</code>
-* proxy_pass <code>ht<span>tps://</span>192.168.1.100:9443/outpost.goauthentik.io</code>
-:::
+    ::: warning
+    Make sure you have changed the authentik proxy pass config. Either you can use internal IP address with port number or public address:
+    * proxy_pass <code>ht<span>tps://</span>auth.example.com/outpost.goauthentik.io</code>
+    * proxy_pass <code>ht<span>tps://</span>192.168.1.100:9443/outpost.goauthentik.io</code>
+    :::
 
-Now you can test your authentication by navigate to <code>ht<span>tps://</span>app.example.com</code> (If you are authenticated in Authentik you must log out to test the system).
+3. Now you can test your authentication by navigate to <code>ht<span>tps://</span>app.example.com</code> (If you are authenticated in Authentik you must log out to test the system).
 
 ## Common Issues
 1. <strong>Getting 500 error after installation</strong>.
@@ -269,27 +269,27 @@ Now you can test your authentication by navigate to <code>ht<span>tps://</span>a
 You can customize the look of the login page.
 
 ### Change Background and Layout
-Go to <strong>Flows and Stages</strong> and then <strong>Flows</strong>.
+1. Go to <strong>Flows and Stages</strong> and then <strong>Flows</strong>.
 Select "<strong>default-authentication-flow</strong>" and click edit.
-* <strong>Name</strong> / <strong>Title</strong>: set to whatever you want.
+    * <strong>Name</strong> / <strong>Title</strong>: set to whatever you want.
 
-Open the Appearance settings:
-* <strong>Layout</strong>: the style of the login form and background. See 
-<a href="https://goauthentik.io/docs/flow/layouts" target="_blank" rel="noreferrer">here</a> for more info.
-* <strong>Background</strong>: select your custom background image.
+2. Open the Appearance settings:
+    * <strong>Layout</strong>: the style of the login form and background. See 
+  <a href="https://goauthentik.io/docs/flow/layouts" target="_blank" rel="noreferrer">here</a> for more info.
+    * <strong>Background</strong>: select your custom background image.
 
-Click Update to save your changes.
+3. Click Update to save your changes.
 
 ### Change Branding Settings
-Go to <strong>System</strong> and then <strong>Tenants</strong>.
+1. Go to <strong>System</strong> and then <strong>Tenants</strong>.
 
-Click the edit button for the domain <code>authentik-default</code>.
+2. Click the edit button for the domain <code>authentik-default</code>.
 
-Here you can change:
-* <strong>Title</strong>
-* <strong>Logo</strong>
-* <strong>Favicon</strong>
+    Here you can change:
+    * <strong>Title</strong>
+    * <strong>Logo</strong>
+    * <strong>Favicon</strong>
 
-You can upload logo and favicon assets to the <code>media</code> folder inside your mapping of the [docker compose file](./authentik#docker-compose). I suggest to create a new directory called <code>logos</code> and place the assets inside. Next you can easily reference them using the path <code>/media/logos/logo.png</code>.
+    You can upload logo and favicon assets to the <code>media</code> folder inside your mapping of the [docker compose file](./authentik#docker-compose). I suggest to create a new directory called <code>logos</code> and place the assets inside. Next you can easily reference them using the path <code>/media/logos/logo.png</code>.
 
-Click Update to save your changes.
+3. Click Update to save your changes.

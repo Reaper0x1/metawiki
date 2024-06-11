@@ -31,7 +31,7 @@ pivpn -qr
 ## Fix ERR_NETWORK_ACCESS_DENIED error
 If you want to connect to local IP addresses of your host network you can get the error <code>ERR_NETWORK_ACCESS_DENIED</code>.
 
-To fix the error, edit the configuration on your client:
+1. To fix the error, edit the configuration on your client:
 ```txt{4}
 [Peer]
 PublicKey = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -40,4 +40,4 @@ AllowedIPs = 0.0.0.0/0, ::/0, 192.168.1.0/24
 Endpoint = xxx.xxx.xxx.xxx:51820
 PersistentKeepalive = 25
 ```
-You need to add <code>192.168.1.0/24</code> (<a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing" target="_blank" rel="noreferrer">CIDR</a> notation) to <code>AllowedIPs</code>. Make sure that the IP matches your local network.
+2. You need to add <code>192.168.1.0/24</code> (<a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing" target="_blank" rel="noreferrer">CIDR</a> notation) to <code>AllowedIPs</code>. Make sure that the IP matches your local network.

@@ -70,11 +70,11 @@ After initialization you can open the web interface at <code>ht<span>tp://</span
 
 ## Configuration
 
-After opening the web page, update the following values:
-* Host: <code>mariadb</code>
-* Username: <code>projectsend</code>
-* Password: the one you put in <code>MYSQL_PASSWORD</code>
-* Default maximum upload file size: <code>5120</code>
+1. After opening the web page, update the following values:
+    * Host: <code>mariadb</code>
+    * Username: <code>projectsend</code>
+    * Password: the one you put in <code>MYSQL_PASSWORD</code>
+    * Default maximum upload file size: <code>5120</code>
 
-Click **Check** and then **Write config file**.  
-Give a name and create an admin account.
+2. Click **Check** and then **Write config file**.  
+3. Give a name and create an admin account.

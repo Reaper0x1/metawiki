@@ -55,12 +55,13 @@ After initialization you can open the web interface at <code>ht<span>tp://</span
 ## qBittorrent Integration (Download Client)
 Radarr needs a download client to automatically downloads movies for you.
 
-To set qBittorrent as a default download client go to <code>Settings</code> > <code>Downloads Clients</code>. Select qBittorrent and enter:
-* Host: <code>192.168.1.110:8105</code>
-* Username: <code>admin</code>
-* Password: qBittorrent admin password
+1. To set qBittorrent as a default download client go to <code>Settings</code> > <code>Downloads Clients</code>. 
+2. Select qBittorrent and enter:
+    * Host: <code>192.168.1.110:8105</code>
+    * Username: <code>admin</code>
+    * Password: qBittorrent admin password
 
-Test the client and save.
+3.Test the client and save.
 
 ::: warning
 If you change [qBittorrent](/media-docs-files/services/qbittorrent#docker-compose) port or your ip is different from the defaults you need to adjust them.

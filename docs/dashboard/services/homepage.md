@@ -7,7 +7,7 @@ A modern, fully static, fast, secure fully proxied, highly customizable applicat
 The guide refers to the domain <code>example.com</code> and the local IP <code>192.168.1.100</code>, be sure to change them according to your configuration.
 :::
 
-## 1. Docker Compose
+## Docker Compose
 The installation requires Docker and Docker Compose installed. If you have not installed it please check [this guide](/docker/install.md).
 
 Create the following <code>docker-compose.yml</code>:
@@ -31,7 +31,7 @@ services:
 * Update <code>your-config-location</code> to your desired location for configuration files.
 :::
 
-## 2. Run the container
+## Run the container
 For version of Docker Compose <code>≥ 2</code> use the following command to create and start the container:
 ```bash
 docker compose up -d

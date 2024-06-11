@@ -161,182 +161,181 @@ notifier:
 -> Before starting the container, you must create the users database like below.
 
 ## Users Database
-In the **config** folder create a new file named <code>users_database.yml</code>. If it is already present, overwrite it with: 
-```yml{2,4}
-users:
-  user1: 
-    displayname: "User Name 1" 
-    password: "$argon2i$v=19$m=1024,t=1,p=8$eTQ3MXdqOGFiaDZoMUtMVw$OeHWQSg9zGKslOepe5t4D1T9BZJjHA1Z+doxZrZYDgI" 
-    email: youremail@gmail.com 
-    groups: #enter the groups you want the user to be part of below
-      - admins
-      - dev
+1. In the **config** folder create a new file named <code>users_database.yml</code>. If it is already present, overwrite it with: 
+    ```yml{2,4}
+    users:
+      user1: 
+        displayname: "User Name 1" 
+        password: "$argon2i$v=19$m=1024,t=1,p=8$eTQ3MXdqOGFiaDZoMUtMVw$OeHWQSg9zGKslOepe5t4D1T9BZJjHA1Z+doxZrZYDgI" 
+        email: youremail@gmail.com 
+        groups: #enter the groups you want the user to be part of below
+          - admins
+          - dev
+    ```
+2. Change <code>user1</code> to whatever you would like. This is the username used to login.
 
-```
-Change <code>user1</code> to whatever you would like. This is the username used to login.
+3. Update the <code>displayname</code> and <code>email</code>.
 
-Update the <code>displayname</code> and <code>email</code>.
+4. To generate the password you must go to https://argon2.online/:
+    * Plain Text Input: <code>write your password</code>
+    * Salt: <code>just click the gear to create a random one</code>
+    * Parallelism Factor: <code>8</code>
+    * Memory Cost>: <code>1024</code>
+    * Iterations: <code>1</code>
+    * Hash Length: <code>32</code>
+    * Type: <code>Argon2id</code>
 
-To generate the password you must go to https://argon2.online/:
-* Plain Text Input: <code>write your password</code>
-* Salt: <code>just click the gear to create a random one</code>
-* Parallelism Factor: <code>8</code>
-* Memory Cost>: <code>1024</code>
-* Iterations: <code>1</code>
-* Hash Length: <code>32</code>
-* Type: <code>Argon2id</code>
+5. Next click **Generate Hash**, copy the <code>Output in Encoded Form </code> and paste it in the <code>password</code> field inside the file.
 
-Next click **Generate Hash**, copy the <code>Output in Encoded Form </code> and paste it in the <code>password</code> field inside the file.
-
-Now you can restart the Authelia container.
+6. Now you can restart the Authelia container.
 
 ::: info
 Any time you add a new user, you will need to restart the Authelia container to recognize the new settings/rules.
 :::
 
-After initialization you can open the web interface at <code>ht<span>tp://</span>192.168.1.100:9091</code>.
+7. After initialization you can open the web interface at <code>ht<span>tp://</span>192.168.1.100:9091</code>.
 
 ## Nginx Proxy Manager Integration
-Create a <code>Proxy Host</code> for Authelia and your other services as shown [here](./nginx-proxy-manager.md#add-new-host).
+1. Create a <code>Proxy Host</code> for Authelia and your other services as shown [here](./nginx-proxy-manager.md#add-new-host).
 
-In the Authelia Proxy Host go to <code>Advanced</code> tab and paste this configuration:
-```yml{2,31}
-location / {
-set $upstream_authelia http://192.168.1.100:9091;
-proxy_pass $upstream_authelia;
-client_body_buffer_size 128k;
+2. In the Authelia Proxy Host go to <code>Advanced</code> tab and paste this configuration:
+    ```yml{2,31}
+    location / {
+    set $upstream_authelia http://192.168.1.100:9091;
+    proxy_pass $upstream_authelia;
+    client_body_buffer_size 128k;
 
-#Timeout if the real server is dead
-proxy_next_upstream error timeout invalid_header http_500 http_502 http_503;
+    #Timeout if the real server is dead
+    proxy_next_upstream error timeout invalid_header http_500 http_502 http_503;
 
-# Advanced Proxy Config
-send_timeout 5m;
-proxy_read_timeout 360;
-proxy_send_timeout 360;
-proxy_connect_timeout 360;
+    # Advanced Proxy Config
+    send_timeout 5m;
+    proxy_read_timeout 360;
+    proxy_send_timeout 360;
+    proxy_connect_timeout 360;
 
-# Basic Proxy Config
-proxy_set_header Host $host;
-proxy_set_header X-Real-IP $remote_addr;
-proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-proxy_set_header X-Forwarded-Proto $scheme;
-proxy_set_header X-Forwarded-Host $http_host;
-proxy_set_header X-Forwarded-Uri $request_uri;
-proxy_set_header X-Forwarded-Ssl on;
-proxy_redirect  http://  $scheme://;
-proxy_http_version 1.1;
-proxy_set_header Connection "";
-proxy_cache_bypass $cookie_session;
-proxy_no_cache $cookie_session;
-proxy_buffers 64 256k;
+    # Basic Proxy Config
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Host $http_host;
+    proxy_set_header X-Forwarded-Uri $request_uri;
+    proxy_set_header X-Forwarded-Ssl on;
+    proxy_redirect  http://  $scheme://;
+    proxy_http_version 1.1;
+    proxy_set_header Connection "";
+    proxy_cache_bypass $cookie_session;
+    proxy_no_cache $cookie_session;
+    proxy_buffers 64 256k;
 
-# If behind reverse proxy, forwards the correct IP, assumes you're using Cloudflare. Adjust IP for your Docker network.
-set_real_ip_from 192.168.1.0/24;
-real_ip_header CF-Connecting-IP;
-real_ip_recursive on;
-}
-```
+    # If behind reverse proxy, forwards the correct IP, assumes you're using Cloudflare. Adjust IP for your Docker network.
+    set_real_ip_from 192.168.1.0/24;
+    real_ip_header CF-Connecting-IP;
+    real_ip_recursive on;
+    }
+    ```
 
-* You must change <code>http://192.168.1.100:9091</code> to the IP address and port of your Authelia installation.
+    * You must change <code>http://192.168.1.100:9091</code> to the IP address and port of your Authelia installation.
 
-* Make sure that <code>set_real_ip_from</code> matches your netowrk setup.
+    * Make sure that <code>set_real_ip_from</code> matches your netowrk setup.
 
-Next you can save the configuration.
+3. Next you can save the configuration.
 
-Now, for every subdomain you want to protect, add this configuration to his <code>Advanced</code> tab:
-```yml{3,33,34,45,73}
-location /authelia {
-internal;
-set $upstream_authelia http://192.168.1.100:9091/api/verify; #change the IP and Port to match the IP and Port of your Authelia container
-proxy_pass_request_body off;
-proxy_pass $upstream_authelia;    
-proxy_set_header Content-Length "";
+4. Now, for every subdomain you want to protect, add this configuration to his <code>Advanced</code> tab:
+    ```yml{3,33,34,45,73}
+    location /authelia {
+    internal;
+    set $upstream_authelia http://192.168.1.100:9091/api/verify; #change the IP and Port to match the IP and Port of your Authelia container
+    proxy_pass_request_body off;
+    proxy_pass $upstream_authelia;    
+    proxy_set_header Content-Length "";
 
-# Timeout if the real server is dead
-proxy_next_upstream error timeout invalid_header http_500 http_502 http_503;
-client_body_buffer_size 128k;
-proxy_set_header Host $host;
-proxy_set_header X-Original-URL $scheme://$http_host$request_uri;
-proxy_set_header X-Real-IP $remote_addr;
-proxy_set_header X-Forwarded-For $remote_addr; 
-proxy_set_header X-Forwarded-Proto $scheme;
-proxy_set_header X-Forwarded-Host $http_host;
-proxy_set_header X-Forwarded-Uri $request_uri;
-proxy_set_header X-Forwarded-Ssl on;
-proxy_redirect  http://  $scheme://;
-proxy_http_version 1.1;
-proxy_set_header Connection "";
-proxy_cache_bypass $cookie_session;
-proxy_no_cache $cookie_session;
-proxy_buffers 4 32k;
+    # Timeout if the real server is dead
+    proxy_next_upstream error timeout invalid_header http_500 http_502 http_503;
+    client_body_buffer_size 128k;
+    proxy_set_header Host $host;
+    proxy_set_header X-Original-URL $scheme://$http_host$request_uri;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $remote_addr; 
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Host $http_host;
+    proxy_set_header X-Forwarded-Uri $request_uri;
+    proxy_set_header X-Forwarded-Ssl on;
+    proxy_redirect  http://  $scheme://;
+    proxy_http_version 1.1;
+    proxy_set_header Connection "";
+    proxy_cache_bypass $cookie_session;
+    proxy_no_cache $cookie_session;
+    proxy_buffers 4 32k;
 
-send_timeout 5m;
-proxy_read_timeout 240;
-proxy_send_timeout 240;
-proxy_connect_timeout 240;
-}
+    send_timeout 5m;
+    proxy_read_timeout 240;
+    proxy_send_timeout 240;
+    proxy_connect_timeout 240;
+    }
 
-location / {
-set $upstream_plex $forward_scheme://$server:$port; 
-proxy_pass $upstream_plex; 
+    location / {
+    set $upstream_plex $forward_scheme://$server:$port; 
+    proxy_pass $upstream_plex; 
 
-auth_request /authelia;
-auth_request_set $target_url https://$http_host$request_uri;
-auth_request_set $user $upstream_http_remote_user;
-auth_request_set $email $upstream_http_remote_email;
-auth_request_set $groups $upstream_http_remote_groups;
-proxy_set_header Remote-User $user;
-proxy_set_header Remote-Email $email;
-proxy_set_header Remote-Groups $groups;
+    auth_request /authelia;
+    auth_request_set $target_url https://$http_host$request_uri;
+    auth_request_set $user $upstream_http_remote_user;
+    auth_request_set $email $upstream_http_remote_email;
+    auth_request_set $groups $upstream_http_remote_groups;
+    proxy_set_header Remote-User $user;
+    proxy_set_header Remote-Email $email;
+    proxy_set_header Remote-Groups $groups;
 
-error_page 401 =302 https://auth.example.com/?rd=$target_url; #change this to match your authentication domain/subdomain
+    error_page 401 =302 https://auth.example.com/?rd=$target_url; #change this to match your authentication domain/subdomain
 
-client_body_buffer_size 128k;
+    client_body_buffer_size 128k;
 
-proxy_next_upstream error timeout invalid_header http_500 http_502 http_503;
+    proxy_next_upstream error timeout invalid_header http_500 http_502 http_503;
 
-send_timeout 5m;
-proxy_read_timeout 360;
-proxy_send_timeout 360;
-proxy_connect_timeout 360;
+    send_timeout 5m;
+    proxy_read_timeout 360;
+    proxy_send_timeout 360;
+    proxy_connect_timeout 360;
 
-proxy_set_header Host $host;
-proxy_set_header Upgrade $http_upgrade;
-proxy_set_header Connection upgrade;
-proxy_set_header Accept-Encoding gzip;
-proxy_set_header X-Real-IP $remote_addr;
-proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-proxy_set_header X-Forwarded-Proto $scheme;
-proxy_set_header X-Forwarded-Host $http_host;
-proxy_set_header X-Forwarded-Uri $request_uri;
-proxy_set_header X-Forwarded-Ssl on;
-proxy_redirect  http://  $scheme://;
-proxy_http_version 1.1;
-proxy_set_header Connection "";
-proxy_cache_bypass $cookie_session;
-proxy_no_cache $cookie_session;
-proxy_buffers 64 256k;
+    proxy_set_header Host $host;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection upgrade;
+    proxy_set_header Accept-Encoding gzip;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Host $http_host;
+    proxy_set_header X-Forwarded-Uri $request_uri;
+    proxy_set_header X-Forwarded-Ssl on;
+    proxy_redirect  http://  $scheme://;
+    proxy_http_version 1.1;
+    proxy_set_header Connection "";
+    proxy_cache_bypass $cookie_session;
+    proxy_no_cache $cookie_session;
+    proxy_buffers 64 256k;
 
-set_real_ip_from 192.168.1.0/24; 
-real_ip_header CF-Connecting-IP;
-real_ip_recursive on;
+    set_real_ip_from 192.168.1.0/24; 
+    real_ip_header CF-Connecting-IP;
+    real_ip_recursive on;
 
-}
-```
-* You must change <code>http://192.168.1.100:9091/api/verify</code> to the IP address and port of your Authelia installation.
-* In **error_page** change <code>https://auth.example.com/?rd=$target_url</code> to match your Authelia subdomain.
-* At the end, update <code>set_real_ip_from</code> to match your network setup. 
+    }
+    ```
+    * You must change <code>http://192.168.1.100:9091/api/verify</code> to the IP address and port of your Authelia installation.
+    * In **error_page** change <code>https://auth.example.com/?rd=$target_url</code> to match your Authelia subdomain.
+    * At the end, update <code>set_real_ip_from</code> to match your network setup. 
 
-At the middle of the configuration you can see this two lines:
-```yml
-set $upstream_plex $forward_scheme://$server:$port; 
-proxy_pass $upstream_plex; 
-```
-Here you must change $upstream_<span style="color:orange"><strong>plex</strong></span> with the name of the container in both lines.
-::: tip
-If the container name is like <code>nginx-proxy-manager</code>, you must replace '-' with '_', resulting in <code>$upstream_nginx_proxy_manager</code>.
-:::
+5. At the middle of the configuration you can see this two lines:
+    ```yml
+    set $upstream_plex $forward_scheme://$server:$port; 
+    proxy_pass $upstream_plex; 
+    ```
+    Here you must change $upstream_<span style="color:orange"><strong>plex</strong></span> with the name of the container in both lines.
+    ::: tip
+    If the container name is like <code>nginx-proxy-manager</code>, you must replace '-' with '_', resulting in <code>$upstream_nginx_proxy_manager</code>.
+    :::
 
-Now you can save the configuration.
+6. Now you can save the configuration.
 
 If we go to the subdomain of the service configured before, for example <code>plex.example.com</code>, we will be redirected to <code>auth.example.com</code>. After logging in we should be redirected back to <code>plex.example.com</code>.

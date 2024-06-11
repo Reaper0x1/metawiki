@@ -112,74 +112,74 @@ Create an <code>admin</code> account and complete the initial configuration.
 ## Domain Configuration
 To be able to use Nexcloud through a domain it needs some extra configuration.
 
-Create a <code>Proxy Host</code> for Nextcloud as shown [here](/security/services/nginx-proxy-manager.md#add-new-host).
+1. Create a <code>Proxy Host</code> for Nextcloud as shown [here](/security/services/nginx-proxy-manager.md#add-new-host).
 
-Next, open the <code>config.php</code> file inside the configuration folder of Nextcloud (<code>/your-config-location/config</code>).
+2. Next, open the <code>config.php</code> file inside the configuration folder of Nextcloud (<code>/your-config-location/config</code>).
 
-You should somethings like this:
-```php{24,25,26,27}
-<?php
-$CONFIG = array (
-  'htaccess.RewriteBase' => '/',
-  'memcache.local' => '\\OC\\Memcache\\APCu',
-  'apps_paths' => 
-  array (
-    0 => 
-    array (
-      'path' => '/var/www/html/apps',
-      'url' => '/apps',
-      'writable' => false,
-    ),
-    1 => 
-    array (
-      'path' => '/var/www/html/custom_apps',
-      'url' => '/custom_apps',
-      'writable' => true,
-    ),
-  ),
-  'upgrade.disable-web' => true,
-  'instanceid' => 'hghggggggg',
-  'passwordsalt' => 'khkhkhkhkhkhkhkhkhkh',
-  'secret' => 'kljkljkljkljljljkljljljljlj',
-  'trusted_domains' => 
-  array (
-    0 => '192.168.1.111:8080',
-  ),
-  'datadirectory' => '/var/www/html/data',
-  'dbtype' => 'mysql',
-  'version' => '28.0.1.1',
-  'overwrite.cli.url' => 'http://192.168.1.111:8080',
-  'dbname' => 'nextcloud',
-  'dbhost' => 'db',
-  'dbport' => '',
-  'dbtableprefix' => 'oc_',
-  'mysql.utf8mb4' => true,
-  'dbuser' => 'nextcloud',
-  'dbpassword' => 'strong-password',
-  'installed' => true,
-);
-```
+    You should somethings like this:
+    ```php{24,25,26,27}
+    <?php
+    $CONFIG = array (
+      'htaccess.RewriteBase' => '/',
+      'memcache.local' => '\\OC\\Memcache\\APCu',
+      'apps_paths' => 
+      array (
+        0 => 
+        array (
+          'path' => '/var/www/html/apps',
+          'url' => '/apps',
+          'writable' => false,
+        ),
+        1 => 
+        array (
+          'path' => '/var/www/html/custom_apps',
+          'url' => '/custom_apps',
+          'writable' => true,
+        ),
+      ),
+      'upgrade.disable-web' => true,
+      'instanceid' => 'hghggggggg',
+      'passwordsalt' => 'khkhkhkhkhkhkhkhkhkh',
+      'secret' => 'kljkljkljkljljljkljljljljlj',
+      'trusted_domains' => 
+      array (
+        0 => '192.168.1.111:8080',
+      ),
+      'datadirectory' => '/var/www/html/data',
+      'dbtype' => 'mysql',
+      'version' => '28.0.1.1',
+      'overwrite.cli.url' => 'http://192.168.1.111:8080',
+      'dbname' => 'nextcloud',
+      'dbhost' => 'db',
+      'dbport' => '',
+      'dbtableprefix' => 'oc_',
+      'mysql.utf8mb4' => true,
+      'dbuser' => 'nextcloud',
+      'dbpassword' => 'strong-password',
+      'installed' => true,
+    );
+    ```
 
-Edit the <code>trusted_domains</code> section and add your domain, for example:
-```php
-  'trusted_domains' => 
-  array (
-    0 => '192.168.1.111:8080',
-    1 => 'nextcloud.example.com'
-  ),
-```
+3. Edit the <code>trusted_domains</code> section and add your domain, for example:
+    ```php
+      'trusted_domains' => 
+      array (
+        0 => '192.168.1.111:8080',
+        1 => 'nextcloud.example.com'
+      ),
+    ```
 
-After that add a new configuration to trust Nginx Proxy Manager. Change the IP address to your NPM installation:
-```php
-  'trusted_proxies' => 
-  array (
-    0 => '192.168.1.100',
-  ),
-```
+4. After that add a new configuration to trust Nginx Proxy Manager. Change the IP address to your NPM installation:
+    ```php
+      'trusted_proxies' => 
+      array (
+        0 => '192.168.1.100',
+      ),
+    ```
 
-If you want to force <code>https</code>, add <code>'overwriteprotocol' => 'https',</code> to the configuration file.
+    If you want to force <code>https</code>, add <code>'overwriteprotocol' => 'https',</code> to the configuration file.
 
-Now restart Nextcloud container.
+5. Now restart Nextcloud container.
 
 ## Slowness fix
 Inside the config folder edit the <code>.htaccess</code> file and add those lines at the start:

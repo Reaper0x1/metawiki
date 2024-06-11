@@ -101,126 +101,126 @@ The goal is to route all traffic of one container to the one just created in ord
 
 qBittorrent container is used as an example.
 
-To be able to view qBittorrent Web UI and make possible for services like Sonarr and Radarr to reach qBittorrent, you need to create a custom network with the command:
-```bash
-docker network create gluetunbridge
-```
-Change <code>gluetunbridge</code> to whatever you like. If so, remember to update the name in the <code>docker-compose.yml</code> file below.
-
-::: details Multiple docker-compose.yml file
-
-::: code-group
-```yml [gluetun]
-version: "3"
-services:
-  gluetun:
-    image: qmcgaw/gluetun
-    cap_add:
-      - NET_ADMIN
-    devices:
-      - /dev/net/tun:/dev/net/tun
-    ports:
-      - 8000:8000/tcp # HTTP control server
-      - 8888:8888/tcp # HTTP proxy
-      - 8388:8388/tcp # Shadowsocks
-      - 8388:8388/udp # Shadowsocks
-      - 8105:8105 # qBittorrent
-    volumes:
-      - /your-config-location:/gluetun
-    environment:
-      - VPN_SERVICE_PROVIDER=custom
-      - VPN_TYPE=openvpn
-      # OpenVPN:
-      - OPENVPN_CUSTOM_CONFIG=/gluetun/custom.ovpn
-      - OPENVPN_USER="username"
-      - OPENVPN_PASSWORD="password"
-      - UPDATER_PERIOD=24h
-      - FIREWALL_OUTBOUND_SUBNETS=172.23.0.0/16,192.168.1.0/24
-      - TZ=Europe/Rome
-    network_mode: gluetunbridge
-    restart: always
-```
-
-```yml [qBittorrent]
-version: "2.1"
-services:
-  qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:latest
-    container_name: qbittorrent
-    environment:
-      - PUID=998
-      - PGID=100
-      - TZ=Etc/UTC
-      - WEBUI_PORT=8105
-    volumes:
-      - /your-config-location:/config
-      - /your-download-location:/downloads
-    restart: unless-stopped
-    network_mode: "container:gluetun"
-```
-:::
-
-::: details Single docker-compose.yml file
-
-```yml
-version: "3"
-services:
-  gluetun:
-    image: qmcgaw/gluetun
-    container_name: gluetun
-    cap_add:
-      - NET_ADMIN
-    devices:
-      - /dev/net/tun:/dev/net/tun
-    ports:
-      - 8000:8000/tcp # HTTP control server
-      - 8888:8888/tcp # HTTP proxy
-      - 8388:8388/tcp # Shadowsocks
-      - 8388:8388/udp # Shadowsocks
-      - 8105:8105 # qBittorrent
-    volumes:
-      - /your-config-location:/gluetun
-    environment:
-      - VPN_SERVICE_PROVIDER=custom
-      - VPN_TYPE=openvpn
-      # OpenVPN:
-      - OPENVPN_CUSTOM_CONFIG=/gluetun/custom.ovpn
-      - OPENVPN_USER="username"
-      - OPENVPN_PASSWORD="password"
-      - UPDATER_PERIOD=24h
-      - FIREWALL_OUTBOUND_SUBNETS=172.23.0.0/16,192.168.1.0/24
-      - TZ=Europe/Rome
-    network_mode: gluetunbridge
-    restart: always
-
-  qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:latest
-    container_name: qbittorrent
-    environment:
-      - PUID=998
-      - PGID=100
-      - TZ=Etc/UTC
-      - WEBUI_PORT=8105
-    volumes:
-      - /your-config-location:/config
-      - /your-download-location:/downloads
-    depends_on:
-      - gluetun
-    network_mode: "service:gluetun"
-```
-:::
-
-::: info
-* Update <code>FIREWALL_OUTBOUND_SUBNETS</code> with your network range.\
-After you created the <code>gluetunbridge</code>, you need to change <code>172.23.0.0/16</code> to match gluetunbridge range. To do so, run the following command and look for "IPv4Address":
+1. To be able to view qBittorrent Web UI and make possible for services like Sonarr and Radarr to reach qBittorrent, you need to create a custom network with the command:
     ```bash
-    docker inspect gluetunbridge
+    docker network create gluetunbridge
     ```
-* Make sure to change <code>network_mode</code> to the same name of Gluetun container.
-:::
+2. Change <code>gluetunbridge</code> to whatever you like. If so, remember to update the name in the <code>docker-compose.yml</code> file below.
 
-::: warning
-Once qBitorrent is up, go to <code>Settings</code> -> <code>Advanced</code> tab and set the **Network interface** to <code>tun0</code>
-:::
+    ::: details Multiple docker-compose.yml file
+
+    ::: code-group
+    ```yml [gluetun]
+    version: "3"
+    services:
+      gluetun:
+        image: qmcgaw/gluetun
+        cap_add:
+          - NET_ADMIN
+        devices:
+          - /dev/net/tun:/dev/net/tun
+        ports:
+          - 8000:8000/tcp # HTTP control server
+          - 8888:8888/tcp # HTTP proxy
+          - 8388:8388/tcp # Shadowsocks
+          - 8388:8388/udp # Shadowsocks
+          - 8105:8105 # qBittorrent
+        volumes:
+          - /your-config-location:/gluetun
+        environment:
+          - VPN_SERVICE_PROVIDER=custom
+          - VPN_TYPE=openvpn
+          # OpenVPN:
+          - OPENVPN_CUSTOM_CONFIG=/gluetun/custom.ovpn
+          - OPENVPN_USER="username"
+          - OPENVPN_PASSWORD="password"
+          - UPDATER_PERIOD=24h
+          - FIREWALL_OUTBOUND_SUBNETS=172.23.0.0/16,192.168.1.0/24
+          - TZ=Europe/Rome
+        network_mode: gluetunbridge
+        restart: always
+    ```
+
+    ```yml [qBittorrent]
+    version: "2.1"
+    services:
+      qbittorrent:
+        image: lscr.io/linuxserver/qbittorrent:latest
+        container_name: qbittorrent
+        environment:
+          - PUID=998
+          - PGID=100
+          - TZ=Etc/UTC
+          - WEBUI_PORT=8105
+        volumes:
+          - /your-config-location:/config
+          - /your-download-location:/downloads
+        restart: unless-stopped
+        network_mode: "container:gluetun"
+    ```
+    :::
+
+    ::: details Single docker-compose.yml file
+
+    ```yml
+    version: "3"
+    services:
+      gluetun:
+        image: qmcgaw/gluetun
+        container_name: gluetun
+        cap_add:
+          - NET_ADMIN
+        devices:
+          - /dev/net/tun:/dev/net/tun
+        ports:
+          - 8000:8000/tcp # HTTP control server
+          - 8888:8888/tcp # HTTP proxy
+          - 8388:8388/tcp # Shadowsocks
+          - 8388:8388/udp # Shadowsocks
+          - 8105:8105 # qBittorrent
+        volumes:
+          - /your-config-location:/gluetun
+        environment:
+          - VPN_SERVICE_PROVIDER=custom
+          - VPN_TYPE=openvpn
+          # OpenVPN:
+          - OPENVPN_CUSTOM_CONFIG=/gluetun/custom.ovpn
+          - OPENVPN_USER="username"
+          - OPENVPN_PASSWORD="password"
+          - UPDATER_PERIOD=24h
+          - FIREWALL_OUTBOUND_SUBNETS=172.23.0.0/16,192.168.1.0/24
+          - TZ=Europe/Rome
+        network_mode: gluetunbridge
+        restart: always
+
+      qbittorrent:
+        image: lscr.io/linuxserver/qbittorrent:latest
+        container_name: qbittorrent
+        environment:
+          - PUID=998
+          - PGID=100
+          - TZ=Etc/UTC
+          - WEBUI_PORT=8105
+        volumes:
+          - /your-config-location:/config
+          - /your-download-location:/downloads
+        depends_on:
+          - gluetun
+        network_mode: "service:gluetun"
+    ```
+    :::
+
+    ::: info
+    * Update <code>FIREWALL_OUTBOUND_SUBNETS</code> with your network range.\
+    After you created the <code>gluetunbridge</code>, you need to change <code>172.23.0.0/16</code> to match gluetunbridge range. To do so, run the following command and look for "IPv4Address":
+        ```bash
+        docker inspect gluetunbridge
+        ```
+    * Make sure to change <code>network_mode</code> to the same name of Gluetun container.
+    :::
+
+    ::: warning
+    Once qBitorrent is up, go to <code>Settings</code> -> <code>Advanced</code> tab and set the **Network interface** to <code>tun0</code>
+    :::
 
 Reference guide <a href="https://drfrankenstein.co.uk/2023/04/23/qbittorrent-with-gluetun-vpn-in-container-manager-on-a-synology-nas/" target="_blank" rel="noreferrer">here</a>

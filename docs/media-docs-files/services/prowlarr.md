@@ -54,15 +54,15 @@ Public one are the only with 'free' access. Semi-Private and Private needs an ac
 ## Radarr and Sonarr Integration
 To sync the indexer to Radarr or Sonarr we need to add them to the Prowlarr apps.
 
-Navigate to <code>Settings</code> > <code>Apps</code>.
+1. Navigate to <code>Settings</code> > <code>Apps</code>.
 
-Click Radarr or Sonarr
+2. Click Radarr or Sonarr
 
-Change <code>localhost</code> to the Radarr/Sonarr installation IP address
+3. Change <code>localhost</code> to the Radarr/Sonarr installation IP address
 
-Next you need to add an <code>API Key</code>. To get one go to Radarr/Sonarr web interface, then <code>Settings</code> > <code>General</code> and copy the key.
+4. Next you need to add an <code>API Key</code>. To get one go to Radarr/Sonarr web interface, then <code>Settings</code> > <code>General</code> and copy the key.
 
-Test and click Save.
+5. Test and click Save.
 
 ## Customization
 You can change the theme of Plex web application by adding these variables to the <code>docker-compose.yml</code> file:

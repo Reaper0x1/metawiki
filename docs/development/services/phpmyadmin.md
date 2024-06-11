@@ -4,7 +4,7 @@
 phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web.
 
 ::: info
-The guide refers to the domain <code>example.com</code> and the local IP <code>192.168.1.400</code>, be sure to change them according to your configuration.
+The guide refers to the domain <code>example.com</code> and the local IP <code>192.168.1.100</code>, be sure to change them according to your configuration.
 :::
 
 ## Docker Compose
@@ -44,4 +44,4 @@ For older versions use:
 docker-compose up -d
 ```
 
-After initialization you can open the web interface at <code>ht<span>tp://</span>192.168.1.140:7171</code>
+After initialization you can open the web interface at <code>ht<span>tp://</span>192.168.1.100:7171</code>
