@@ -1,4 +1,4 @@
-# Deluge <img src="/deluge-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/deluge-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Deluge <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
 Deluge is a lightweight, Free Software, cross-platform BitTorrent client. Full Encryption, WebUI, plugin system and much more.

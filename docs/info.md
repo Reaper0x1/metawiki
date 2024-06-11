@@ -31,6 +31,11 @@ Some useful notes.
 
 ## 🏷️ Service Categories
 
+Every service is tagged with one of these badges:
+- <Badge type="tip" text="docker" />: This means that the service is created via a Docker container  
+- <Badge type="warning" text="lxc" />: This means that the service is automatically created via a LXC (Proxmox) container script. 
+- <Badge type="info" text="system" />: This means that the service is manually installed on a container/virtual machine.
+
 :::info 🤖 [Automation](/automation/info)
 Automation software designed to reduce human intervention in processes.
 :::

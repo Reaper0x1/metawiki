@@ -1,4 +1,4 @@
-# Fail2Ban <img src="/fail2ban-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/fail2ban-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Fail2ban <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
 Fail2Ban scans log files like /var/log/auth.log and bans IP addresses conducting too many failed login attempts. It does this by updating system firewall rules to reject new connections from those IP addresses, for a configurable amount of time.

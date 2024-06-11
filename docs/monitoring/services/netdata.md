@@ -1,4 +1,4 @@
-# Netdata <img src="/netdata-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/netdata-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Netdata <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
 Netdata is a distributed real-time, health monitoring platform for systems, hardware, containers & applications, collecting metrics.

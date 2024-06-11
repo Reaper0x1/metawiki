@@ -1,5 +1,4 @@
-# FireflyIII <img src="/fireflyiii-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
-
+# <img src="/fireflyiii-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Firefly III <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 Firefly III is a (self-hosted) manager for your personal finances. It can help you keep track of your expenses and income, so you can spend less and save more. Firefly III supports the use of budgets, categories and tags. Using a bunch of external tools, you can import data. It also has many neat financial reports available.
 

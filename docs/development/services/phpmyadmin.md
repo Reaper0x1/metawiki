@@ -1,4 +1,4 @@
-# phpMyAdmin <img src="/phpmyadmin-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/phpmyadmin-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">phpMyAdmin <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
 phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web.

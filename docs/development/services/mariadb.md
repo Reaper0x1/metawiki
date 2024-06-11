@@ -1,4 +1,4 @@
-# MariaDB <img src="/mariadb-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/mariadb-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">MariaDB <Badge type="warning" text="lxc" style=" position: relative; float: right;" />
 
 MariaDB Server is one of the most popular open source relational databases.
 

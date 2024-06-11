@@ -1,5 +1,4 @@
-# Wireguard <img src="/wireguard-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
-
+# <img src="/wireguard-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Wireguard <Badge type="warning" text="lxc" style=" position: relative; float: right;" />
 Fast, modern, secure VPN tunnel. WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.
 
 ## Installation

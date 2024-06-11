@@ -1,4 +1,4 @@
-# mylar3 <img src="/mylar3-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/mylar3-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">mylar3 <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
 Mylar is an automated Comic Book (cbr/cbz) downloader program for use with NZB and torrents.

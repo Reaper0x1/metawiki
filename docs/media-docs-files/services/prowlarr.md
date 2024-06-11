@@ -1,4 +1,4 @@
-# Prowlarr <img src="/prowlarr-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/prowlarr-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Prowlarr <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
 Prowlarr is an indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps.

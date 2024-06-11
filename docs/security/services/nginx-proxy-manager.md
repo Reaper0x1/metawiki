@@ -1,4 +1,4 @@
-# Nginx Proxy Manager <img src="/npm-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/npm-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Nginx Proxy Manager <Badge type="tip" text="docker" style=" position: relative; float: right;" /><Badge type="warning" text="lxc" style=" position: relative; float: right;" />
 
 
 The Nginx Proxy Manager conveniently manages proxy hosts for your web services, whether on your home network or otherwise.
@@ -30,6 +30,12 @@ services:
 * If you want to change <code>port</code> make sure to change only the left one (<span style="color:orange"><strong>80</strong></span>:80).
 * Update the <code>volumes</code> to your desired location (only left path).
 :::
+
+## Proxmox LXC
+Run the following command in the Proxmox shell:
+```bash
+bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/nginxproxymanager.sh)"
+```
 
 ## Run the container
 For version of Docker Compose <code>≥ 2</code> use the following command to create and start the container:

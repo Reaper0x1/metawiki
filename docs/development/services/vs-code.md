@@ -1,5 +1,4 @@
-# VS Code Server <img src="/vs-code-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
-
+# <img src="/vs-code-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">VS Code Server <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.
 

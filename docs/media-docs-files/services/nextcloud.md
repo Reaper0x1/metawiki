@@ -1,4 +1,4 @@
-# Nextcloud <img src="/nextcloud-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/nextcloud-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Nextcloud <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
 A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms.

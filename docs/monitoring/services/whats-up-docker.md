@@ -1,4 +1,4 @@
-# Whats Up Docker <img src="/whats-up-docker-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/whats-up-docker-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Whats Up Docker <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
 What's up Docker? (aka WUD). Gets you notified when new versions of your Docker containers are available and lets you react the way you want.

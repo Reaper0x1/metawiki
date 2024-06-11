@@ -1,13 +1,13 @@
-# Homepage <img src="/homepage-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/homepage-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Homepage <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
 A modern, fully static, fast, secure fully proxied, highly customizable application dashboard with integrations for over 100 services and translations into multiple languages. Easily configured via YAML files or through docker label discovery. 
 
 ::: info
-The guide refers to the domain <code>example.com</code> and the local IP <code>192.168.1.104</code>, be sure to change them according to your configuration.
+The guide refers to the domain <code>example.com</code> and the local IP <code>192.168.1.100</code>, be sure to change them according to your configuration.
 :::
 
-## Docker Compose
+## 1. Docker Compose
 The installation requires Docker and Docker Compose installed. If you have not installed it please check [this guide](/docker/install.md).
 
 Create the following <code>docker-compose.yml</code>:
@@ -26,12 +26,12 @@ services:
     restart: unless-stopped
 ```
 
-::: info
+:::info CHANGES
 * If you want to change <code>port</code> make sure to change only the left one (<span style="color:orange"><strong>3000</strong></span>:3000).
 * Update <code>your-config-location</code> to your desired location for configuration files.
 :::
 
-## Run the container
+## 2. Run the container
 For version of Docker Compose <code>≥ 2</code> use the following command to create and start the container:
 ```bash
 docker compose up -d
@@ -41,9 +41,9 @@ For older versions use:
 docker-compose up -d
 ```
 
-After initialization you can open the web interface at <code>ht<span>tp://</span>192.168.1.104:3000</code>
+After initialization you can open the web interface at <code>ht<span>tp://</span>192.168.1.100:3000</code>
 
-## Configuration
+## 3. Configuration
 Full guide <a href="https://gethomepage.dev" target="_blank" rel="noreferrer">here</a>.
 
 ### Add external Docker socket
@@ -51,12 +51,13 @@ Full guide <a href="https://gethomepage.dev" target="_blank" rel="noreferrer">he
 Before starting, you must have followed [this guide](/docker/extra-configuration.md#enable-tcp-port-2375-for-external-connection-to-docker) on exposing docker socket port for remote communication.
 :::
 
-Edit <code>docker.yaml</code> in Homepage confi folder and add:
+Edit <code>docker.yaml</code> in Homepage config folder and add:
 ```yaml
 my-docker:
    host: 192.168.1.111
    port: 2375
 ```
+
 Replace <code>my-docker</code> with your preferred one and then replace <code>192.168.1.111</code> with the IP address of your remote docker.
 
 Now you can use the docker integration within <code>services.yaml</code>:

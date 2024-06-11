@@ -1,4 +1,4 @@
-# Komga <img src="/komga-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/komga-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Komga <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
 A media server for your comics, mangas, BDs, magazines and eBooks. 

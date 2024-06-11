@@ -1,4 +1,4 @@
-# Duplicacy <img src="/duplicacy-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/duplicacy-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Duplicacy <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
 Duplicacy is the only cloud backup tool that allows multiple computers to back up to the same cloud storage, taking advantage of cross-computer deduplication whenever possible, without direct communication among them. This feature turns any cloud storage server supporting only a basic set of file operations into a sophisticated deduplication-aware server.

@@ -1,4 +1,4 @@
-# qBittorrent <img src="/qbittorrent-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/qbittorrent-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">qBittorrent <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 The qBittorrent project aims to provide an open-source software alternative to µTorrent.
 

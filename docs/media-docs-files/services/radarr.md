@@ -1,4 +1,4 @@
-# Radarr <img src="/radarr-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/radarr-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Radarr <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
 Radarr makes failed downloads a thing of the past. Password protected releases, missing repair blocks or virtually any other reason? no worries.

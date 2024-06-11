@@ -1,4 +1,4 @@
-# Plex Media Server <img src="/plex-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-left:10px;">
+# <img src="/plex-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Plex Media Server <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
 Plex is your destination to stream TV shows, movies, and sports. Find great movies to watch and stream all your personal media libraries on every device.
