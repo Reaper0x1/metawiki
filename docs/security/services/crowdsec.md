@@ -23,7 +23,7 @@ This will install both the <code>Security Engine</code> and the <code>Bouncer</c
     ```
 3. Inside <code>Security Engines</code> tab, click <code>Add Security Agent</code>
 4. Copy the <code>enroll</code> command from the bottom of the page and run it inside each container.
-5. Go back on the website, click agents and accept the enrollment.
+5. Go back on the website, click <code>Engines</code> and accept the enrollment.
 6. Restart crowdsec:
     ```bash
     systemctl restart crowdsec
