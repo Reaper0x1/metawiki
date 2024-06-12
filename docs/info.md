@@ -42,7 +42,7 @@ Automation software designed to reduce human intervention in processes.
 :::info 🛡️ [Security](/security/info)
 Defend your system and network!
 :::
-:::info 🎥 [Media - Docs - Files](/media-docs-files/info)
+:::info 🎥 [Media - Docs - Files](/media-files/info)
 Useful tools for managing files, media, movie like streaming service, file downloaders and file sharing.
 :::
 :::info 👨‍💻 [Personal](/personal/info)

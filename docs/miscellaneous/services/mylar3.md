@@ -64,10 +64,10 @@ Radarr needs a download client to automatically downloads movies for you.
 3.Test the client and save.
 
 ::: warning
-If you change [qBittorrent](/media-docs-files/services/qbittorrent#docker-compose) port or your ip is different from the defaults you need to adjust them.
+If you change [qBittorrent](/media-files/services/qbittorrent#docker-compose) port or your ip is different from the defaults you need to adjust them.
 :::
 
 ## Prowlarr Integration (Indexer)
 Radarr needs indexer to be able to do queries and find torrent movies for you and automatically add them to your download client.
 
-To add Prowlarr as your main indexer follow [this guide](/media-docs-files/services/prowlarr#radarr-and-sonarr-integration).
+To add Prowlarr as your main indexer follow [this guide](/media-files/services/prowlarr#radarr-and-sonarr-integration).

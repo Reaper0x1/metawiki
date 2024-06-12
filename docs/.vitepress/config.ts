@@ -12,8 +12,11 @@ var wazuhListenerPath = `${wazuhPath}/docker-listener`
 var autoPath = "automation"
 var mediaServPath = `${autoPath}/services`
 
-var mediaPath = "media-docs-files"
+var mediaPath = "media-files"
 var mediaServPath = `${mediaPath}/services`
+
+var docPath = "documents-url"
+var docServPath = `${docPath}/services`
 
 var personalPath = "personal"
 var personalServPath = `${personalPath}/services`
@@ -92,8 +95,12 @@ export default defineConfig({
             link: `/${securityPath}/info`,
           },
           {
-            text: "🎥 Media - Docs - Files",
+            text: "🎥 Media - Files",
             link: `/${mediaPath}/info`,
+          },
+          {
+            text: "📄 Documents - URL",
+            link: `/${docPath}/info`,
           },
           {
             text: "👨‍💻 Personal",
@@ -240,7 +247,7 @@ export default defineConfig({
         ]
       },
       {
-        text: "🎥 Media - Docs - Files",
+        text: "🎥 Media - Files",
         collapsed: true,
         items: [
           {
@@ -266,10 +273,6 @@ export default defineConfig({
               {
                 text: "Komga",
                 link: `/${mediaServPath}/komga`,
-              },
-              {
-                text: "Linkwarden",
-                link: `/${mediaServPath}/linkwarden`,
               },
               {
                 text: "Nextcloud",
@@ -307,13 +310,33 @@ export default defineConfig({
                 text: "Sonarr",
                 link: `/${mediaServPath}/sonarr`,
               },
-              {
-                text: "Stirling PDF",
-                link: `/${mediaServPath}/stirling-pdf`,
-              },
             ],
           },
 
+        ]
+      },
+      {
+        text: "📄 Documents - URL",
+        collapsed: true,
+        items: [
+          {
+            text: "Info",
+            link: `/${docPath}/info`,
+          },
+          {
+            text: "Services",
+            collapsed: true,
+            items: [
+              {
+                text: "Linkwarden",
+                link: `/${docServPath}/linkwarden`,
+              },
+              {
+                text: "Stirling PDF",
+                link: `/${docServPath}/stirling-pdf`,
+              },
+            ]
+          }
         ]
       },
       {

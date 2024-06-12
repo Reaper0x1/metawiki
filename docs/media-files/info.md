@@ -1,4 +1,4 @@
-# 🎮 Media - Docs - Files
+# 🎮 Media - Files
 
 Useful tools for managing files, media, movie like streaming service, file downloaders and file sharing.
 
@@ -28,11 +28,6 @@ Readarr is a ebook collection manager for Usenet and BitTorrent users. It can mo
 Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 :::
 
-## Documents
-:::info [<img src="/stirling-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/stirling-pdf) ‎ ‎ [Stirling PDF](./services/stirling-pdf) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
-This is a robust, locally hosted web-based PDF manipulation tool using Docker. It enables you to carry out various operations on PDF files, including splitting, merging, converting, reorganizing, adding images, rotating, compressing, and more.
-:::
-
 ## File Downloader
 :::info [<img src="/deluge-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/deluge) ‎ ‎ [Deluge](./services/deluge) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 Deluge is a lightweight, Free Software, cross-platform BitTorrent client. Full Encryption, WebUI, plugin system and much more.
@@ -54,7 +49,3 @@ Duplicacy is the only cloud backup tool that allows multiple computers to back u
 ProjectSend is an open source, clients-oriented, private file sharing web application.
 :::
 
-## Bookmarks
-:::info [<img src="/linkwarden-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/linkwarden) ‎ ‎ [Linkwarden](./services/linkwarden) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
-Linkwarden is a self-hosted, open-source collaborative bookmark manager to collect, organize and archive webpages.
-:::
