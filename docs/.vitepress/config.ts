@@ -299,6 +299,10 @@ export default defineConfig({
                 text: "Sonarr",
                 link: `/${mediaServPath}/sonarr`,
               },
+              {
+                text: "Stirling PDF",
+                link: `/${mediaServPath}/stirling-pdf`,
+              },
             ],
           },
 
