@@ -42,8 +42,11 @@ Automation software designed to reduce human intervention in processes.
 :::info 🛡️ [Security](/security/info)
 Defend your system and network!
 :::
-:::info 🎥 [Media - Docs - Files](/media-files/info)
+:::info 🎥 [Media - Files](/media-files/info)
 Useful tools for managing files, media, movie like streaming service, file downloaders and file sharing.
+:::
+:::info 📄 [Docs - URL](/documents/info)
+Useful tools for taking notes, managing documents and URL.
 :::
 :::info 👨‍💻 [Personal](/personal/info)
 Personal tools such as personal links, finance, subscriptions and password manager.
