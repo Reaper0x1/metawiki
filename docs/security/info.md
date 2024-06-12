@@ -28,3 +28,8 @@ Fast, modern, secure VPN tunnel. WireGuard is an extremely simple yet fast and m
 :::info [<img src="/gluetun-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/gluetun) ‎ ‎ [Gluetun](./services/gluetun) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 VPN client in a thin Docker container for multiple VPN providers, written in Go, and using OpenVPN or Wireguard, DNS over TLS, with a few proxy servers built-in. 
 :::
+
+## Network and System Monitor
+:::info [<img src="/wazuh-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/wazuh) ‎ ‎ [Wazuh](./services/wazuh/install) <Badge type="info" text="system" style=" position: relative; float: right;" />
+Wazuh is a free and open source security platform that unifies XDR and SIEM protection for endpoints and cloud workloads.
+:::

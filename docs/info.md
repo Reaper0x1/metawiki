@@ -45,7 +45,7 @@ Defend your system and network!
 :::info 🎥 [Media - Files](/media-files/info)
 Useful tools for managing files, media, movie like streaming service, file downloaders and file sharing.
 :::
-:::info 📄 [Docs - URL](/documents/info)
+:::info 📄 [Docs - URL](/documents-url/info)
 Useful tools for taking notes, managing documents and URL.
 :::
 :::info 👨‍💻 [Personal](/personal/info)
