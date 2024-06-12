@@ -211,7 +211,7 @@ export default defineConfig({
                 items: [
                   {
                     text: "Install",
-                    link: `/${wazuhPath}/install`,
+                    link: `/${wazuhPath}/wazuh`,
                   },
                   {
                     text: "Docker Listener",

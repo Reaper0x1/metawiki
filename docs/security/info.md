@@ -30,6 +30,6 @@ VPN client in a thin Docker container for multiple VPN providers, written in Go,
 :::
 
 ## Network and System Monitor
-:::info [<img src="/wazuh-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/wazuh) ‎ ‎ [Wazuh](./services/wazuh/install) <Badge type="info" text="system" style=" position: relative; float: right;" />
+:::info [<img src="/wazuh-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/wazuh/wazuh) ‎ ‎ [Wazuh](./services/wazuh/wazuh) <Badge type="info" text="system" style=" position: relative; float: right;" />
 Wazuh is a free and open source security platform that unifies XDR and SIEM protection for endpoints and cloud workloads.
 :::

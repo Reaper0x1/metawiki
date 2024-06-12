@@ -25,6 +25,11 @@ The Wazuh Security Information and Event Management (SIEM) solution provides mon
 - Ubuntu 16.04, 18.04, 20.04, 22.04
 
 ## Install
+
+:::warning
+If you want to change the default logs folder see [here](#with-bindmount-with-proxmox-pre-install) before installation:
+:::
+
 1. Download and run the Wazuh installation assistant.
     ```bash
     curl -sO https://packages.wazuh.com/4.8/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
@@ -102,4 +107,42 @@ When the system is swapping memory, the Wazuh indexer may not work as expected. 
     If the output is <code>false</code>, the request has failed, and the following line appears in the <code>/var/log/wazuh-indexer/wazuh-indexer.log</code> file:
     ```bash
     Unable to lock JVM Memory
+    ```
+
+## Change default log folder
+To move the alerts to a new directory, I recommend changing the whole directory of <code>/var/ossec/logs/</code> in Wazuh. This way, we would avoid possible conflicts for modifying the alerts original path.
+
+### With bindmount with Proxmox (Pre-Install)
+1. In Proxmox shell, edit the LXC configuration file (the container must be stopped):
+    ```bash
+    nano /etc/pve/lxc/<LXC-ID>.conf
+    ```
+2. Add the bindmount
+    ```bash
+    mp0: /your-proxmox-host-folder,mp=/var/ossec/logs
+    ```
+3. Start the container.
+
+### With fstab (Post-Install)
+In order to do this, you can follow these steps:
+
+1. Stop the wazuh-manager process:
+    ```bash
+    systemctl stop wazuh-manager
+    ```
+2. Move the content from the logs directory to the new one:
+    ```bash
+    mv /var/ossec/logs/* /your_new_path
+    ```
+3. Create the mount binding among the directories:
+    ```bash
+    mount --bind /your_new_path /var/ossec/logs
+    ```
+4. To make these changes permanently and do not lose this mount when restarting the system use the command below:
+    ```bash
+    echo "/your_new_path /var/ossec/logs/ none defaults,bind 0 0" >> /etc/fstab
+    ```
+5. Start wazuh-manager:
+    ```bash
+    systemctl start wazuh-manager 
     ```
