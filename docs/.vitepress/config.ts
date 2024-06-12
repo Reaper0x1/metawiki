@@ -447,7 +447,7 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                   {
-                    text: "Install",
+                    text: "Info",
                     link: `/${wazuhPath}/wazuh`,
                   },
                   {

@@ -121,7 +121,11 @@ To move the alerts to a new directory, I recommend changing the whole directory 
     ```bash
     mp0: /your-proxmox-host-folder,mp=/var/ossec/logs
     ```
-3. Start the container.
+3. Change the permission (root) from Proxmox shell:
+    ```bash
+    chown -R 100000:100000 your-proxmox-host-folder
+    ```
+4. Start the container.
 
 ### With fstab (Post-Install)
 In order to do this, you can follow these steps:
