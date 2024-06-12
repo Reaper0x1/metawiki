@@ -287,6 +287,14 @@ export default defineConfig({
                 text: "Radarr",
                 link: `/${mediaServPath}/radarr`,
               },
+              {
+                text: "Readarr",
+                link: `/${mediaServPath}/readarr`,
+              },
+              {
+                text: "Sonarr",
+                link: `/${mediaServPath}/sonarr`,
+              },
             ],
           },
 

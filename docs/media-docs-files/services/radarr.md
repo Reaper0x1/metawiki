@@ -37,7 +37,7 @@ services:
 * Update <code>your-downloads-location</code> to your downloads folder location.
 * Update <code>your-movies-location</code> to your movies folder location.
 
-For <code>qBittorrent</code> and <code>Plex</code> integration use the same download and movies folder
+For <code>qBittorrent</code> and <code>Plex</code> integration use the same downloads and movies folder.
 :::
 
 ## Run the container
@@ -57,8 +57,8 @@ Radarr needs a download client to automatically downloads movies for you.
 
 1. To set qBittorrent as a default download client go to <code>Settings</code> > <code>Downloads Clients</code>.
 2. Click the plus symbol and add a new client:
-    * Host: <code>192.168.1.110</code>
-    * Port: <code>8105</code>
+    * Host: <code>qBittorrent IP</code>
+    * Port: <code>qBittorrent Port</code>
     * Username: <code>admin</code>
     * Password: qBittorrent admin password
 

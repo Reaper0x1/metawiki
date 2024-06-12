@@ -1,4 +1,4 @@
-# <img src="/authentik-icon2.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Authentik <Badge type="tip" text="docker" style=" position: relative; float: right;" />
+# <img src="/authentik-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">Authentik <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
 Authentik is an open-source Identity Provider that emphasizes flexibility and versatility.

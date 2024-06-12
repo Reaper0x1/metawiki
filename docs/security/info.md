@@ -17,7 +17,7 @@ The Nginx Proxy Manager is a reverse-proxy that conveniently manages proxy hosts
 :::info [<img src="/authelia-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/authelia) ‎ ‎ [Authelia](./services/authelia) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 Authelia is an open-source authentication and authorization server and portal fulfilling the identity and access management (IAM) role of information security in providing multi-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion for common reverse proxies.
 :::
-:::info [<img src="/authentik-icon2.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/authentik) ‎ ‎ [Authentik](./services/authentik) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
+:::info [<img src="/authentik-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/authentik) ‎ ‎ [Authentik](./services/authentik) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 Authentik is an open-source Identity Provider that emphasizes flexibility and versatility.
 :::
 

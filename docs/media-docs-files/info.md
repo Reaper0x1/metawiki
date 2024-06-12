@@ -18,6 +18,12 @@ Prowlarr is an indexer manager/proxy built on the popular arr .net/reactjs base 
 :::info [<img src="/radarr-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/radarr) ‎ ‎ [Radarr](./services/radarr) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 Radarr makes failed downloads a thing of the past. Password protected releases, missing repair blocks or virtually any other reason? no worries.
 :::
+:::info [<img src="/readarr-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/readarr) ‎ ‎ [Readarr](./services/readarr) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
+Readarr is a ebook collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new books from your favorite authors and will interface with clients and indexers to grab, sort, and rename them.
+:::
+:::info [<img src="/sonarr-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/sonarr) ‎ ‎ [Sonarr](./services/sonarr) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
+Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
+:::
 
 ## File Downloader
 :::info [<img src="/deluge-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/deluge) ‎ ‎ [Deluge](./services/deluge) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
