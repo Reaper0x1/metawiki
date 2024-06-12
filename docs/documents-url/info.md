@@ -2,7 +2,10 @@
 
 Useful tools for taking notes, managing documents and URL.
 
-## Documents
+## Documents and Notes
+:::info [<img src="/outline-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/outline) ‎ ‎ [Outline](./services/outline) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
+A modern team knowledge base for your internal documentation, product specs, support answers, meeting notes, onboarding, and more.
+:::
 :::info [<img src="/stirling-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/stirling-pdf) ‎ ‎ [Stirling PDF](./services/stirling-pdf) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 This is a robust, locally hosted web-based PDF manipulation tool using Docker. It enables you to carry out various operations on PDF files, including splitting, merging, converting, reorganizing, adding images, rotating, compressing, and more.
 :::

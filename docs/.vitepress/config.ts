@@ -332,6 +332,10 @@ export default defineConfig({
                 link: `/${docServPath}/linkwarden`,
               },
               {
+                text: "Outline",
+                link: `/${docServPath}/outline`,
+              },
+              {
                 text: "Stirling PDF",
                 link: `/${docServPath}/stirling-pdf`,
               },
