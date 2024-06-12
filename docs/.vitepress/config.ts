@@ -268,6 +268,10 @@ export default defineConfig({
                 link: `/${mediaServPath}/komga`,
               },
               {
+                text: "Linkwarden",
+                link: `/${mediaServPath}/linkwarden`,
+              },
+              {
                 text: "Nextcloud",
                 link: `/${mediaServPath}/nextcloud`,
               },

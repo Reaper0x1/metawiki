@@ -1,7 +1,7 @@
 # <img src="/pyload-icon.png" width="40" height="40" style="display:inline-block; vertical-align: middle; margin-right: 10px">pyLoad <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 
 
-The free and open-source Download Manager written in pure Python
+The free and open-source Download Manager written in pure Python.
 
 ::: info
 The guide refers to the domain <code>example.com</code> and the local IP <code>192.168.1.100</code>, be sure to change them according to your configuration.

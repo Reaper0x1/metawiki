@@ -53,3 +53,8 @@ Duplicacy is the only cloud backup tool that allows multiple computers to back u
 :::info [<img src="/projectsend-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/projectsend) ‎ ‎ [ProjectSend](./services/projectsend) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 ProjectSend is an open source, clients-oriented, private file sharing web application.
 :::
+
+## Bookmarks
+:::info [<img src="/linkwarden-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/linkwarden) ‎ ‎ [Linkwarden](./services/linkwarden) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
+Linkwarden is a self-hosted, open-source collaborative bookmark manager to collect, organize and archive webpages.
+:::
