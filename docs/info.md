@@ -39,27 +39,30 @@ Every service is tagged with one of these badges:
 :::info 🤖 [Automation](/automation/info)
 Automation software designed to reduce human intervention in processes.
 :::
-:::info 🛡️ [Security](/security/info)
+:::info 🔎 [Dashboard](/security/dashboard)
 Defend your system and network!
-:::
-:::info 🎥 [Media - Files](/media-files/info)
-Useful tools for managing files, media, movie like streaming service, file downloaders and file sharing.
-:::
-:::info 📄 [Docs - URL](/documents-url/info)
-Useful tools for taking notes, managing documents and URL.
-:::
-:::info 👨‍💻 [Personal](/personal/info)
-Personal tools such as personal links, finance, subscriptions and password manager.
-:::
-:::info 📊 [Monitoring](/automation/info)
-Monitor all your services, processes and systems.
 :::
 :::info 🚀 [Development](/development/info)
 Tools and services usefull for all developers.
 :::
+:::info 📄 [Docs - URL](/documents-url/info)
+Useful tools for taking notes, managing documents and URL.
+:::
 :::info 🎮 [Gaming](/gaming/info)
 Multiplayer game servers and browser games.
 :::
+:::info 🎥 [Media - Files](/media-files/info)
+Useful tools for managing files, media, movie like streaming service, file downloaders and file sharing.
+:::
 :::info 🔮 [Miscellaneous](/miscellaneous/info)
 Other general purpose services.
+:::
+:::info 📊 [Monitoring](/automation/info)
+Monitor all your services, processes and systems.
+:::
+:::info 👨‍💻 [Personal](/personal/info)
+Personal tools such as personal links, finance, subscriptions and password manager.
+:::
+:::info 🛡️ [Security](/security/info)
+Defend your system and network!
 :::
