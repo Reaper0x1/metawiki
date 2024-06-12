@@ -3,6 +3,9 @@
 Useful tools for managing files, media, movie like streaming service, file downloaders and file sharing.
 
 ## Media Management
+:::info [<img src="/kavita-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/kavita) ‎ ‎ [Kavita](./services/kavita) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
+Lightning fast with a slick design, Kavita is a rocket fueled self-hosted digital library which supports a vast array of file formats. Install to start reading and share your server with your friends.
+:::
 :::info [<img src="/komga-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/komga) ‎ ‎ [Komga](./services/komga) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 A media server for your comics, mangas, BDs, magazines and eBooks.
 :::

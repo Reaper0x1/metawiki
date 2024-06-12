@@ -260,6 +260,10 @@ export default defineConfig({
                 link: `/${mediaServPath}/duplicacy`,
               },
               {
+                text: "Kavita",
+                link: `/${mediaServPath}/kavita`,
+              },
+              {
                 text: "Komga",
                 link: `/${mediaServPath}/komga`,
               },
