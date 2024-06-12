@@ -194,6 +194,10 @@ export default defineConfig({
                 link: `/${securityServPath}/authentik`,
               },
               {
+                text: "Crowdsec",
+                link: `/${securityServPath}/crowdsec`,
+              },
+              {
                 text: "Fail2ban",
                 link: `/${securityServPath}/fail2ban`,
               },

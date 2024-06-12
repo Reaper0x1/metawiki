@@ -33,3 +33,6 @@ VPN client in a thin Docker container for multiple VPN providers, written in Go,
 :::info [<img src="/wazuh-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/wazuh/wazuh) ‎ ‎ [Wazuh](./services/wazuh/wazuh) <Badge type="info" text="system" style=" position: relative; float: right;" />
 Wazuh is a free and open source security platform that unifies XDR and SIEM protection for endpoints and cloud workloads.
 :::
+:::info [<img src="/crowdsec-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/crowdsec) ‎ ‎ [Crowdsec](./services/crowdsec) <Badge type="info" text="system" style=" position: relative; float: right;" />
+Crowdsec is an open-source, lightweight software, detecting peers with aggressive behaviors to prevent them from accessing your systems.
+:::
