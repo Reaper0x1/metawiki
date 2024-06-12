@@ -284,6 +284,10 @@ export default defineConfig({
                 link: `/${mediaServPath}/prowlarr`,
               },
               {
+                text: "pyLoad",
+                link: `/${mediaServPath}/pyload`,
+              },
+              {
                 text: "qBittorrent",
                 link: `/${mediaServPath}/qbittorrent`,
               },

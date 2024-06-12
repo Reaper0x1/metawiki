@@ -37,6 +37,9 @@ This is a robust, locally hosted web-based PDF manipulation tool using Docker. I
 :::info [<img src="/deluge-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/deluge) ‎ ‎ [Deluge](./services/deluge) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 Deluge is a lightweight, Free Software, cross-platform BitTorrent client. Full Encryption, WebUI, plugin system and much more.
 :::
+:::info [<img src="/pyload-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/pyload) ‎ ‎ [pyLoad](./services/pyload) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
+The free and open-source Download Manager written in pure Python
+:::
 :::info [<img src="/qbittorrent-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/qbittorrent) ‎ ‎ [qBittorrent](./services/qbittorrent) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 The qBittorrent project aims to provide an open-source software alternative to µTorrent.
 :::
