@@ -395,7 +395,7 @@ export default defineConfig({
                 link: `/${personalServPath}/fireflyiii`,
               },
               {
-                text: "Vaulwarden",
+                text: "Vaultwarden",
                 link: `/${personalServPath}/vaultwarden`,
               },
             ]
