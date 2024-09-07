@@ -286,6 +286,10 @@ export default defineConfig({
                 link: `/${mediaServPath}/duplicacy`,
               },
               {
+                text: "FlareSolverr",
+                link: `/${mediaServPath}/flaresolverr`,
+              },
+              {
                 text: "Kavita",
                 link: `/${mediaServPath}/kavita`,
               },
