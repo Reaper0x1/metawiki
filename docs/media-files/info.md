@@ -6,6 +6,9 @@ Useful tools for managing files, media, movie like streaming service, file downl
 :::info [<img src="/flaresolverr-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/flaresolverr) ‎ ‎ [Flaresolverr](./services/flaresolverr) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 FlareSolverr is a proxy server to bypass Cloudflare and DDoS-GUARD protection.
 :::
+:::info [<img src="/immich-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/immich) ‎ ‎ [Immich](./services/immich) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
+High performance self-hosted photo and video management solution.
+:::
 :::info [<img src="/kavita-icon.png" width="35" height="35" style="display:inline-block; vertical-align: middle;">](./services/kavita) ‎ ‎ [Kavita](./services/kavita) <Badge type="tip" text="docker" style=" position: relative; float: right;" />
 Lightning fast with a slick design, Kavita is a rocket fueled self-hosted digital library which supports a vast array of file formats. Install to start reading and share your server with your friends.
 :::

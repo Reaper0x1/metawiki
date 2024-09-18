@@ -290,6 +290,10 @@ export default defineConfig({
                 link: `/${mediaServPath}/flaresolverr`,
               },
               {
+                text: "Immich",
+                link: `/${mediaServPath}/immich`,
+              },
+              {
                 text: "Kavita",
                 link: `/${mediaServPath}/kavita`,
               },
